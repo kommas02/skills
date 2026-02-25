@@ -1,0 +1,63 @@
+name: Skill Structure Validation
+
+on:
+  push:
+    branches:
+      - main
+      - opencode
+  pull_request:
+    paths:
+      - 'skills/.curated/**'
+
+jobs:
+  validate-skills:
+    name: Validate Skill Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Skill Directories
+        run: |
+          set -e
+          ERROR_COUNT=0
+          
+          for skill_dir in skills/.curated/*/; do
+            SKILL_NAME=$(basename "$skill_dir")
+            echo "Validating skill: $SKILL_NAME"
+            
+            # Check SKILL.md exists
+            if [ ! -f "${skill_dir}SKILL.md" ]; then
+              echo "❌ $SKILL_NAME: Missing SKILL.md"
+              ERROR_COUNT=$((ERROR_COUNT + 1))
+            else
+              # Check required frontmatter
+              if ! grep -q "^---$" "${skill_dir}SKILL.md"; then
+                echo "❌ $SKILL_NAME: SKILL.md missing frontmatter delimiter"
+                ERROR_COUNT=$((ERROR_COUNT + 1))
+              elif ! grep -q "^name:" "${skill_dir}SKILL.md"; then
+                echo "❌ $SKILL_NAME: SKILL.md missing 'name' in frontmatter"
+                ERROR_COUNT=$((ERROR_COUNT + 1))
+              elif ! grep -q "^description:" "${skill_dir}SKILL.md"; then
+                echo "❌ $SKILL_NAME: SKILL.md missing 'description' in frontmatter"
+                ERROR_COUNT=$((ERROR_COUNT + 1))
+              else
+                echo "✅ $SKILL_NAME: SKILL.md valid"
+              fi
+            fi
+            
+            # Check LICENSE.txt exists
+            if [ ! -f "${skill_dir}LICENSE.txt" ]; then
+              echo "❌ $SKILL_NAME: Missing LICENSE.txt"
+              ERROR_COUNT=$((ERROR_COUNT + 1))
+            else
+              echo "✅ $SKILL_NAME: LICENSE.txt present"
+            fi
+          done
+          
+          if [ $ERROR_COUNT -gt 0 ]; then
+            echo "🚫 $ERROR_COUNT validation errors found"
+            exit 1
+          else
+            echo "✅ All skills validated successfully"
+          fi
