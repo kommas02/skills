@@ -16,7 +16,7 @@
 ### Areas to Monitor
 1. **Third-party scripts**: Review any new Python scripts for subprocess usage
 2. **Environment variables**: Ensure no secrets are accidentally committed
-3. **GitHub workflow permissions**: Current minimal permissions set appropriately
+3. **GitHub workflow permissions**: Review periodically - current broad permissions (contents, issues, pull-requests, actions, id-token) needed for AI agent automation
 
 ### Past Security Scans
 | Date | Status | Notes |
