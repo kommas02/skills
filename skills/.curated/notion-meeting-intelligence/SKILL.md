@@ -12,7 +12,7 @@ Prep meetings by pulling Notion context, tailoring agendas/pre-reads, and enrich
 ## Quick start
 1) Confirm meeting goal, attendees, date/time, and decisions needed.
 2) Gather context: search with `Notion:notion-search`, then fetch with `Notion:notion-fetch` (prior notes, specs, OKRs, decisions).
-3) Pick the right template via `reference/template-selection-guide.md` (status, decision, planning, retro, 1:1, brainstorming).
+3) Pick the right template via `references/template-selection-guide.md` (status, decision, planning, retro, 1:1, brainstorming).
 4) Draft agenda/pre-read in Notion with `Notion:notion-create-pages`, embedding source links and owner/timeboxes.
 5) Enrich with Codex research (industry insights, benchmarks, risks) and update the page with `Notion:notion-update-page` as plans change.
 
@@ -39,10 +39,10 @@ After successful login, the user will have to restart codex. You should finish y
 - Retro/feedback → retrospective template.
 - 1:1 → one-on-one template.
 - Ideation → brainstorming template.
-- Use `reference/template-selection-guide.md` to confirm.
+- Use `references/template-selection-guide.md` to confirm.
 
 ### 3) Build the agenda/pre-read
-- Start from the chosen template in `reference/` and adapt sections (context, goals, agenda, owner/time per item, decisions, risks, prep asks).
+- Start from the chosen template in `references/` and adapt sections (context, goals, agenda, owner/time per item, decisions, risks, prep asks).
 - Include links to pulled Notion pages and any required pre-reading.
 - Assign owners for each agenda item; call out timeboxes and expected outputs.
 
@@ -56,5 +56,5 @@ After successful login, the user will have to restart codex. You should finish y
 - Update the page via `Notion:notion-update-page` when details change; keep a brief changelog if multiple edits.
 
 ## References and examples
-- `reference/` — template picker and meeting templates (e.g., `template-selection-guide.md`, `status-update-template.md`, `decision-meeting-template.md`, `sprint-planning-template.md`, `one-on-one-template.md`, `retrospective-template.md`, `brainstorming-template.md`).
+- `references/` — template picker and meeting templates (e.g., `template-selection-guide.md`, `status-update-template.md`, `decision-meeting-template.md`, `sprint-planning-template.md`, `one-on-one-template.md`, `retrospective-template.md`, `brainstorming-template.md`).
 - `examples/` — end-to-end meeting preps (e.g., `executive-review.md`, `project-decision.md`, `sprint-planning.md`, `customer-meeting.md`).
