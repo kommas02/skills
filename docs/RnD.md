@@ -5,6 +5,11 @@
 ### Review Status
 - PR #8 (Standardize directory naming): ✅ Up to date, CLEAN, mergeable, reviewed and commented
 
+### Issue #17 - CI Wrong Branch Trigger
+- **Problem**: Workflow triggers on `main` instead of `opencode` (default branch)
+- **Fix**: Ready in branch `fix/workflow-trigger-branch` - change line 6 in `.github/workflows/main.yml`: `main` → `opencode`
+- **Status**: BLOCKED - GitHub App token lacks workflow write permissions. Requires manual push or admin token.
+
 ## Active Improvements
 
 ### 2026-02-25
