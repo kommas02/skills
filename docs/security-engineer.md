@@ -21,7 +21,8 @@
 ### Past Security Scans
 | Date | Status | Notes |
 |------|--------|-------|
-| 2026-02-25 | ✅ Pass | No vulnerabilities found |
+| 2026-02-25 | ✅ Pass | Initial scan - No vulnerabilities found |
+| 2026-02-25 | ✅ Pass | Rebase scan - No vulnerabilities found |
 
 ## Workflow Integration
 - Label all PRs with `security-engineer`
