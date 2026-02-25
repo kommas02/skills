@@ -7,7 +7,7 @@
 ### 1. Workflow Trigger Branch Mismatch
 - **File**: `.github/workflows/main.yml`
 - **Issue**: Workflow triggered on `main` branch but default branch is `opencode`
-- **Fix**: Changed trigger from `main` to `opencode`
+- **Status**: PENDING - requires GitHub App `workflows` permission to push
 - **Impact**: Workflows will now properly trigger on default branch pushes
 
 ### 2. Default Ref in Install Script
@@ -30,9 +30,14 @@
 
 ## Action Items
 
+- [ ] **Workflow file fix**: Requires GitHub App with `workflows` permission to push changes to `.github/workflows/main.yml` (change `main` to `opencode` on line 6)
 - [ ] Consider creating a centralized config for default branch name
 - [ ] Audit other scripts that may reference "main" branch
 - [ ] Add validation to check branch consistency in CI
+
+## Permission Notes
+
+GitHub App tokens (like those used by CI) require explicit `workflows` permission to modify workflow files. Current token lacks this permission, preventing automated workflow file updates.
 
 ## Last Updated
 
