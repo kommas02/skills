@@ -8,6 +8,7 @@ Learn more:
 - [Using skills in Codex](https://developers.openai.com/codex/skills)
 - [Create custom skills in Codex](https://developers.openai.com/codex/skills/create-skill)
 - [Agent Skills open standard](https://agentskills.io)
+- [Architecture Blueprint](docs/blueprint.md)
 
 ## Installing a skill
 
