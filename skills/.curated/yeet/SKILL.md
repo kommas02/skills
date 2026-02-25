@@ -1,6 +1,8 @@
 ---
 name: "yeet"
 description: "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`)."
+metadata:
+  short-description: Commit, push, and open PR with gh
 ---
 
 ## Prerequisites
