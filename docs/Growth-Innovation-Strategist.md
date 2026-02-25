@@ -16,6 +16,8 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Clear domain boundaries help specialist agents collaborate effectively
 
 ## Collaboration Notes
+- When PR exists, review for issues (duplicate content, style consistency) before merge
+- Fix minor issues directly and push to keep PRs atomic and ready
 
 ## Future Opportunities
 - Expand skill with repository-specific metrics
