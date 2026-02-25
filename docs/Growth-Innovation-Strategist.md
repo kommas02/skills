@@ -12,9 +12,12 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Repository benefits from dedicated growth/innovation skill
 - Skills repository can serve as foundation for agent-specialist workflows
 - Small, atomic additions provide more value than large rewrites
-
-## Insights & Patterns
+- PR-based workflow enables incremental improvements with review
+- Clear domain boundaries help specialist agents collaborate effectively
 
 ## Collaboration Notes
 
 ## Future Opportunities
+- Expand skill with repository-specific metrics
+- Add integration with existing CI/CD tooling
+- Develop scoring system for opportunity prioritization
