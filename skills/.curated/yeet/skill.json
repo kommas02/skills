@@ -1,0 +1,18 @@
+{
+  "name": "yeet",
+  "version": "1.0.0",
+  "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "yeet"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/yeet",
+  "repository": "https://github.com/kommas02/skills"
+}

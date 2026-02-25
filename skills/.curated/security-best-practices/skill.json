@@ -1,0 +1,18 @@
+{
+  "name": "security-best-practices",
+  "version": "1.0.0",
+  "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/r...",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "security"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/security-best-practices",
+  "repository": "https://github.com/kommas02/skills"
+}

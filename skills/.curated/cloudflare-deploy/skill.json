@@ -1,0 +1,18 @@
+{
+  "name": "cloudflare-deploy",
+  "version": "1.0.0",
+  "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "cloudflare"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/cloudflare-deploy",
+  "repository": "https://github.com/kommas02/skills"
+}

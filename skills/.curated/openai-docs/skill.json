@@ -1,0 +1,18 @@
+{
+  "name": "openai-docs",
+  "version": "1.0.0",
+  "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SD...",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "openai"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/openai-docs",
+  "repository": "https://github.com/kommas02/skills"
+}

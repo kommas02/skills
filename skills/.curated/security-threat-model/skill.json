@@ -1,0 +1,18 @@
+{
+  "name": "security-threat-model",
+  "version": "1.0.0",
+  "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the ...",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "security"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/security-threat-model",
+  "repository": "https://github.com/kommas02/skills"
+}
