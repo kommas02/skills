@@ -9,6 +9,10 @@ Learn more:
 - [Create custom skills in Codex](https://developers.openai.com/codex/skills/create-skill)
 - [Agent Skills open standard](https://agentskills.io)
 
+## Architecture
+
+See [docs/blueprint.md](docs/blueprint.md) for the architectural constitution.
+
 ## Installing a skill
 
 Skills in [`.system`](skills/.system/) are automatically installed in the latest version of Codex.
