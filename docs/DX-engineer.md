@@ -32,7 +32,7 @@ INIT → PLAN → IMPLEMENT → VERIFY → SELF-REFLECTION → DELIVER (PR)
 ## Known Issues & Fixes Log
 | Date | Issue | Solution | Status |
 |------|-------|----------|--------|
-| 2026-02-25 | Workflow triggered on wrong branch (main instead of opencode) | Changed `.github/workflows/main.yml` branch from `main` to `opencode` | Fixed |
+| 2026-02-25 | Workflow triggered on wrong branch (main instead of opencode) | Changed `.github/workflows/main.yml` branch from `main` to `opencode` | Ready (push blocked by GitHub App permissions) |
 
 ## Best Practices
 - Never refactor unrelated modules
