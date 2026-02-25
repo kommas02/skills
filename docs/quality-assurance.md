@@ -110,3 +110,32 @@ Quality assurance issues are tracked with:
 
 - #5: Add test coverage for skill validation
 - #21: Add skill evaluation framework for quality assurance
+
+## Evaluation Framework
+
+See [docs/evaluation-framework.md](evaluation-framework.md) for the complete evaluation framework documentation.
+
+### Quick Summary
+
+- **Purpose**: Test skill quality, accuracy, and effectiveness
+- **Location**: Each skill's `evaluation/` directory
+- **Minimum Required**: 2 evaluation cases per skill
+- **Runner**: `scripts/evaluate_skill.py`
+
+### Adding Evaluations
+
+```bash
+mkdir -p skills/my-skill/evaluation/cases
+# Add case JSON files...
+# Add config.json...
+```
+
+### Running Evaluations
+
+```bash
+# Evaluate specific skill
+python scripts/evaluate_skill.py skills/skill-name
+
+# Evaluate all skills
+python scripts/evaluate_skill.py --all
+```
