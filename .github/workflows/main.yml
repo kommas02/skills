@@ -3,7 +3,7 @@ name: parallel
 on:
   push:
     branches:
-      - main
+      - opencode
   schedule:
     - cron: "0 */4 * * *"
   workflow_dispatch:
