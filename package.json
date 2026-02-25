@@ -1,0 +1,11 @@
+{
+  "name": "skills",
+  "version": "1.0.0",
+  "description": "Agent Skills validation tests",
+  "scripts": {
+    "test": "node test/skills.test.js",
+    "test:skills": "node test/skills.test.js"
+  },
+  "devDependencies": {},
+  "type": "module"
+}
