@@ -13,7 +13,7 @@ from github_utils import github_api_contents_url, github_request
 
 DEFAULT_REPO = "openai/skills"
 DEFAULT_PATH = "skills/.curated"
-DEFAULT_REF = "main"
+DEFAULT_REF = "opencode"
 
 
 class ListError(Exception):
