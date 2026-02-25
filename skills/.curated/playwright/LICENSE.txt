@@ -197,5 +197,24 @@
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+================================================================================
+NOTICE FILE CONTENTS
+================================================================================
+
+This skill includes material derived from the Microsoft playwright-cli repository.
+
+Source:
+- Repository: microsoft/playwright-cli
+- Path: skills/playwright-cli/SKILL.md
+
+Copyright (c) Microsoft Corporation.
+
+Licensed under the Apache License, Version 2.0.
+See LICENSE.txt in this directory.
+
+Modifications:
+- Adapted for the Codex skill collection.
+- Added a wrapper script and local reference guides.
