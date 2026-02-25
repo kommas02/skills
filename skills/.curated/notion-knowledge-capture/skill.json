@@ -1,0 +1,18 @@
+{
+  "name": "notion-knowledge-capture",
+  "version": "1.0.0",
+  "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "notion"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/notion-knowledge-capture",
+  "repository": "https://github.com/kommas02/skills"
+}
