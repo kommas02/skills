@@ -64,6 +64,8 @@ skill-name/
     └── assets/           - Files used in output (templates, icons, fonts, etc.)
 ```
 
+For a complete template with required, recommended, and optional sections, see `docs/skill-template.md`.
+
 #### SKILL.md (required)
 
 Every SKILL.md consists of:

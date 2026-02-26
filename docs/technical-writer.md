@@ -6,6 +6,11 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 ## Completed Work
 
 ### 2026-02-26
+- **PR #89**: Add skill-template reference in skill-creator
+  - Added link to `docs/skill-template.md` in skill-creator's "Anatomy of a Skill" section
+  - Ensures new skill creators discover the standardized template
+  - Validation: All 33 skills pass frontmatter and link validation
+
 - **PR #67**: Add skill template with standardized sections
   - Created `docs/skill-template.md` defining REQUIRED, RECOMMENDED, and OPTIONAL sections
   - Provides templates and examples for skill structure
