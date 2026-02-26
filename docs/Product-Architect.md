@@ -18,9 +18,8 @@ The Product-Architect domain focuses on:
 1. Created `docs/skill-schema.md` - JSON Schema definition for skill metadata
 2. Created `scripts/migrate-skill-json.js` - Migration script to generate skill.json for existing skills
 3. Created `scripts/validate-skill-json.js` - Validation script for CI
-4. Created `.github/workflows/skill-json-validate.yml` - CI workflow for validation
-5. Created `docs/blueprint.md` - Updated architectural constitution with skill.json requirements
-6. Generated skill.json for all 32 existing skills
+4. Created `docs/blueprint.md` - Updated architectural constitution with skill.json requirements
+5. Generated skill.json for all 32 existing skills
 
 **Schema Fields**:
 - `name`: kebab-case identifier
@@ -34,6 +33,15 @@ The Product-Architect domain focuses on:
 - `license`: license identifier
 - `homepage`: documentation URL
 - `repository`: source URL
+
+### PR #73: Fix Product-Arhitect Typo
+**Status**: In Review
+
+**Changes**:
+1. Renamed `docs/Product-Arhitect.md` to `docs/Product-Architect-notes.md`
+2. Fixed typo reference in `docs/user-story-engineer.md`
+
+**Impact**: Documentation consistency within Product-Architect domain
 
 ## Future Work
 
@@ -56,5 +64,5 @@ The Product-Architect domain focuses on:
 - Category must be one of: .system, .curated, .experimental
 
 ### CI Validation
-- `skill-json-validate.yml` runs on push to main/opencode and PRs affecting skills/
-- Validation script uses JSON Schema draft-07
+- Validation script (`scripts/validate-skill-json.js`) uses JSON Schema draft-07
+- Note: `.github/workflows/skill-json-validate.yml` was planned but not implemented (QA domain)
