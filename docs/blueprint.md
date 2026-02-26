@@ -127,4 +127,26 @@ node scripts/validate-skill-json.js
 
 ## Telemetry (Optional)
 
-Skills may include optional anonymous usage telemetry. See [Issue #30](https://github.com/kommas02/skills/issues/30) for details on the skill quality telemetry system.
+Skills may include optional anonymous usage telemetry for quality improvement. This is disabled by default and requires explicit opt-in.
+
+### Schema
+
+The telemetry schema is defined in [docs/skill-telemetry-schema.json](skill-telemetry-schema.json) and supports the following event types:
+
+- `invoked` - Skill was invoked
+- `success` - Skill completed successfully
+- `failure` - Skill failed
+- `feedback_positive` - User gave positive feedback
+- `feedback_negative` - User gave negative feedback
+
+### Privacy Principles
+
+- All user IDs must be hashed (SHA-256)
+- No PII collected
+- Opt-in via `SKILL_TELEMETRY_ENABLED=1` environment variable
+- 90-day data retention
+- No cross-site tracking
+
+### Providing Feedback
+
+Users can provide feedback via GitHub issues using the [Skill Feedback template](../.github/ISSUE_TEMPLATE/skill-feedback.md).

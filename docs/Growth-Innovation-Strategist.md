@@ -77,3 +77,10 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Expand skill with repository-specific metrics
 - Add integration with existing CI/CD tooling
 - Develop scoring system for opportunity prioritization
+
+## Skill Quality Telemetry System (Issue #30)
+- Created docs/skill-telemetry-schema.json with privacy-preserving telemetry schema
+- Supports event types: invoked, success, failure, feedback_positive, feedback_negative
+- Privacy principles: hashed user IDs, opt-in only, 90-day retention, no PII
+- Created .github/ISSUE_TEMPLATE/skill-feedback.md for structured feedback collection
+- Updated docs/blueprint.md with telemetry documentation
