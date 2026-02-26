@@ -4,15 +4,19 @@
 
 This document outlines the quality assurance practices for the skills repository.
 
-## Validation Pipeline
+## Validation Scripts
 
-### GitHub Actions Workflow: validate-skills.yml
+The repository includes validation scripts in `.github/scripts/`:
+- `.github/scripts/validate_openai.py` - Validates openai.yaml structure
+- `.github/scripts/validate_skill.py` - Validates SKILL.md frontmatter
 
-The repository includes an automated validation workflow that runs on:
+### GitHub Actions Workflow: validate-skills.yml (NOT YET IMPLEMENTED)
+
+The repository needs an automated validation workflow that runs on:
 - Every pull request modifying files in the `skills/` directory
 - Every push to main branch that modifies files in the `skills/` directory
 
-#### Validation Steps
+#### Required Validation Steps
 
 1. **YAML Syntax Validation**
    - Validates all `agents/openai.yaml` files for proper YAML syntax
@@ -33,13 +37,50 @@ The repository includes an automated validation workflow that runs on:
    - Checks for broken relative links in markdown files
    - Validates that linked resources exist
 
-### Yamllint Configuration
+### Running Validation Locally
 
-The repository uses `.yamllint` configuration with the following rules:
-- Maximum line length: 120 characters (warning level)
-- Indentation: 2 spaces
-- Document start marker: not required
-- Colons: max 0 spaces before, max 1 space after
+```bash
+# Validate SKILL.md files
+python .github/scripts/validate_skill.py
+
+# Validate openai.yaml files
+python .github/scripts/validate_openai.py
+
+# Validate YAML syntax
+python -c "import yaml; yaml.safe_load(open('path/to/openai.yaml'))"
+
+# Validate Python syntax
+python -m py_compile path/to/script.py
+```
+
+### Creating the validate-skills.yml workflow
+
+Create `.github/workflows/validate-skills.yml`:
+
+```yaml
+name: Validate Skills
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'skills/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install pyyaml
+      - run: python .github/scripts/validate_skill.py
+      - run: python .github/scripts/validate_openai.py
+```
 
 ## Skill Structure Requirements
 
