@@ -47,7 +47,8 @@ This document defines the `skill.json` schema for Agent Skills. The metadata fil
     "dependencies": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Other skills this skill depends on"
+      "description": "Other skills this skill depends on. Use skill names (e.g., ['skill-installer', 'doc']). The skill-installer will automatically install missing dependencies in correct order.",
+      "example": ["skill-installer", "doc"]
     },
     "tags": {
       "type": "array",
