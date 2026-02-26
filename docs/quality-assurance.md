@@ -10,11 +10,11 @@ The repository includes validation scripts in `.github/scripts/`:
 - `.github/scripts/validate_openai.py` - Validates openai.yaml structure
 - `.github/scripts/validate_skill.py` - Validates SKILL.md frontmatter
 
-### GitHub Actions Workflow: validate-skills.yml (NOT YET IMPLEMENTED)
+### GitHub Actions Workflow: validate-skills.yml ✅ IMPLEMENTED
 
-The repository needs an automated validation workflow that runs on:
+The repository includes an automated validation workflow at `.github/workflows/validate-skills.yml` that runs on:
 - Every pull request modifying files in the `skills/` directory
-- Every push to main branch that modifies files in the `skills/` directory
+- Every push to opencode branch that modifies files in the `skills/` directory
 
 #### Required Validation Steps
 
@@ -65,7 +65,7 @@ on:
       - 'skills/**'
   push:
     branches:
-      - main
+      - opencode
     paths:
       - 'skills/**'
 
