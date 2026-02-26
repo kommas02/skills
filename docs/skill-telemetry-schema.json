@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Telemetry Schema",
+  "description": "Lightweight, privacy-preserving telemetry schema for skill usage tracking",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "description": "Identifier for the skill (e.g., 'figma', 'pdf', 'playwright')",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": ["invoked", "success", "failure", "feedback_positive", "feedback_negative"],
+      "description": "Type of telemetry event"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the event"
+    },
+    "model_used": {
+      "type": "string",
+      "description": "AI model used (optional, for optimization)"
+    },
+    "duration_ms": {
+      "type": "integer",
+      "description": "Execution duration in milliseconds (optional)"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Anonymized user identifier (hash of user ID, not raw)",
+      "maxLength": 64
+    }
+  },
+  "required": ["skill_id", "event_type", "timestamp"],
+  "additionalProperties": false,
+  "privacy": {
+    "description": "Privacy-preserving design principles",
+    "principles": [
+      "user_id must be hashed (SHA-256 recommended)",
+      "No personally identifiable information (PII) collected",
+      "All tracking is opt-in via environment variable",
+      "Data retention period: 90 days",
+      "No cross-site tracking or fingerprinting"
+    ]
+  },
+  "example": {
+    "skill_id": "figma",
+    "event_type": "success",
+    "timestamp": "2026-02-26T10:30:00Z",
+    "model_used": "o3-mini",
+    "duration_ms": 45000,
+    "user_id": "a1b2c3d4e5f6..."
+  }
+}
