@@ -133,5 +133,5 @@ This documentation was created as part of Issue #6: "Add .opencode configuration
 ## Improvements Log
 
 ### 2026-02-26
-- Synced root `opencode.json` with `.opencode/opencode.json` to include permission section
-- Fixed typo in `.github/workflows/main.yml`: "compleks" → "complex"
+- Synced root `opencode.json` with `.opencode/opencode.json` to include permission section (PR #90)
+- Fixed typo in `.github/workflows/main.yml`: "compleks" → "complex" (pending - blocked by repo rules)
