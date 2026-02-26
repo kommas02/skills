@@ -11,6 +11,23 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Updated skill-creator template with model requirements guidance
 
 ## Implementation Details
+### Skill Versioning System (Issue #7)
+- Added version field to SKILL.md frontmatter template in skill-creator
+- Updated quick_validate.py to allow 'version' as valid frontmatter property
+- Created scripts/generate_skill_index.py to generate skills/index.json
+- Created .github/workflows/update-skill-index.yml for auto-updates
+- Documented versioning guidelines in .opencode/README.md
+
+#### Version Format
+- MAJOR (1.0.0 → 2.0.0): Breaking changes
+- MINOR (1.0.0 → 1.1.0): New features, backward compatible
+- PATCH (1.0.0 → 1.0.1): Bug fixes
+
+#### Auto-Generated Index
+- skills/index.json contains all 33 skills with metadata
+- Auto-updated via GitHub Actions on SKILL.md or LICENSE.txt changes
+- Includes: name, description, version, category, path, metadata, license
+
 ### skill-model-compatibility.json
 - Maps all 33 skills to required model capabilities (vision, function_calling, reasoning, large_context)
 - Documents recommended/fallback models for each skill
