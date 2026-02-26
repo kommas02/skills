@@ -37,3 +37,14 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
 - DX-Engineer: Developer experience and tooling
 - Product-Architect: System architecture and skill schema
 - Quality-Assurance: Evaluation frameworks and testing
+
+---
+
+## Recent Work
+
+### 2026-02-26
+- **Issue #86**: Improved contributing.md with skill creation guidance
+  - Added "Creating Skills" section with quick start guide
+  - Documented required directory structure and SKILL.md requirements
+  - Added resources section linking to skill-template.md and system skills
+  - PR #87: https://github.com/kommas02/skills/pull/87
