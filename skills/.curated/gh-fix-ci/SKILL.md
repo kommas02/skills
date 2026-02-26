@@ -67,3 +67,7 @@ Usage examples:
 - `python "<path-to-skill>/scripts/inspect_pr_checks.py" --repo "." --pr "123"`
 - `python "<path-to-skill>/scripts/inspect_pr_checks.py" --repo "." --pr "https://github.com/org/repo/pull/123" --json`
 - `python "<path-to-skill>/scripts/inspect_pr_checks.py" --repo "." --max-lines 200 --context 40`
+
+## Model Requirements
+
+This skill benefits from **reasoning** capability for analyzing CI failures and logs. Use `gpt-4o` or `o1` for complex debugging. See `skill-model-compatibility.json` for full details.

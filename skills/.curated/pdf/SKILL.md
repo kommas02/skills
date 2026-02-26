@@ -65,3 +65,7 @@ pdftoppm -png $INPUT_PDF $OUTPUT_PREFIX
 - Do not deliver until the latest PNG inspection shows zero visual or formatting defects.
 - Confirm headers/footers, page numbering, and section transitions look polished.
 - Keep intermediate files organized or remove them after final approval.
+
+## Model Requirements
+
+This skill may require **vision** capability for visual PDF analysis. Use `gpt-4o` or `gpt-4-turbo` when visual review is needed. See `skill-model-compatibility.json` for full details.

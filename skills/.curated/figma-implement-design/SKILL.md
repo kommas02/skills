@@ -262,3 +262,7 @@ By following this workflow, you ensure that every Figma design is implemented wi
 - [Figma MCP Server Documentation](https://developers.figma.com/docs/figma-mcp-server/)
 - [Figma MCP Server Tools and Prompts](https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/)
 - [Figma Variables and Design Tokens](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+
+## Model Requirements
+
+This skill requires **vision** capability for analyzing Figma designs. Use `gpt-4o` or `gpt-4-turbo` for optimal results. See `skill-model-compatibility.json` for full details.
