@@ -9,6 +9,7 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Focus on measurable outcomes, automation, and strategic leverage points
 - Created skill-model-compatibility.json - maps all skills to optimal AI model capabilities
 - Updated skill-creator template with model requirements guidance
+- Added model requirements to top skills: figma, pdf, gh-fix-ci, screenshot, figma-implement-design
 
 ## Implementation Details
 ### Skill Versioning System (Issue #7)
@@ -38,6 +39,16 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Added "Model Requirements" section to skill-creator SKILL.md
 - Documents common capability requirements with examples
 - References compatibility matrix for full details
+
+### Skill Model Requirements Updates (2026-02-26)
+- Added Model Requirements section to 5 key skills:
+  - figma (requires vision)
+  - pdf (may require vision)
+  - screenshot (requires vision)
+  - figma-implement-design (requires vision)
+  - gh-fix-ci (benefits from reasoning)
+- Each skill now includes recommended models and references the compatibility matrix
+- All modified skills pass quick_validate.py
 
 ## Insights & Patterns
 - Repository benefits from dedicated growth/innovation skill

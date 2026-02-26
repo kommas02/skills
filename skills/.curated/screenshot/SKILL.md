@@ -265,3 +265,7 @@ gnome-screenshot -w -f output/window.png
 - If Linux region/window capture fails, check tool availability with `command -v scrot`, `command -v gnome-screenshot`, and `command -v import`.
 - If saving to the OS default location fails with permission errors in a sandbox, rerun the command with escalated permissions.
 - Always report the saved file path in the response.
+
+## Model Requirements
+
+This skill requires **vision** capability for analyzing screenshots. Use `gpt-4o` or `gpt-4-turbo` for optimal results. See `skill-model-compatibility.json` for full details.
