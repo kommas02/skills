@@ -245,3 +245,7 @@ For secrets and configuration:
 - [CLI commands](references/cli-commands.md)
 - [Deployment patterns](references/deployment-patterns.md)
 - [netlify.toml guide](references/netlify-toml.md)
+
+## Model Requirements
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

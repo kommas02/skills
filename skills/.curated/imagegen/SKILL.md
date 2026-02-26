@@ -172,3 +172,7 @@ Asset-type templates (website assets, game assets, wireframes, logo) are consoli
 - **`references/prompting.md`**: prompting principles (structure, constraints/invariants, iteration patterns).
 - **`references/sample-prompts.md`**: copy/paste prompt recipes (generate + edit workflows; examples only).
 - **`references/codex-network.md`**: environment/sandbox/network-approval troubleshooting.
+
+## Model Requirements
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

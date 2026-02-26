@@ -50,6 +50,18 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Each skill now includes recommended models and references the compatibility matrix
 - All modified skills pass quick_validate.py
 
+### Additional Skill Model Requirements Updates
+- Extended Model Requirements section to 8 more frequently-used skills:
+  - playwright (function calling)
+  - cloudflare-deploy (function calling)
+  - netlify-deploy (function calling)
+  - vercel-deploy (function calling)
+  - linear (function calling)
+  - notion-knowledge-capture (function calling)
+  - imagegen (function calling)
+  - jupyter-notebook (function calling)
+- Total: 13 skills now document model requirements
+
 ## Insights & Patterns
 - Repository benefits from dedicated growth/innovation skill
 - Skills repository can serve as foundation for agent-specialist workflows

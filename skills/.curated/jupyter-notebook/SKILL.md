@@ -105,3 +105,7 @@ No required environment variables.
 - `references/tutorial-patterns.md`: tutorial structure and teaching flow.
 - `references/notebook-structure.md`: notebook JSON shape and safe editing rules.
 - `references/quality-checklist.md`: final validation checklist.
+
+## Model Requirements
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

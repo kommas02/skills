@@ -222,3 +222,7 @@ Example guidance to the user:
 ```
 The deploy needs escalated network access to deploy to Cloudflare. I can rerun the command with escalated permissions—want me to proceed?
 ```
+
+## Model Requirements
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.
