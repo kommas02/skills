@@ -31,6 +31,7 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │       ├── figma-implement-design/
 │       ├── gh-address-comments/
 │       ├── gh-fix-ci/
+│       ├── growth-innovation-strategist/
 │       ├── imagegen/
 │       ├── jupyter-notebook/
 │       ├── linear/
@@ -40,7 +41,20 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │       ├── notion-research-documentation/
 │       ├── notion-spec-to-implementation/
 │       ├── openai-docs/
-│       └── pdf/
+│       ├── pdf/
+│       ├── playwright/
+│       ├── render-deploy/
+│       ├── screenshot/
+│       ├── security-best-practices/
+│       ├── security-ownership-map/
+│       ├── security-threat-model/
+│       ├── sentry/
+│       ├── sora/
+│       ├── speech/
+│       ├── spreadsheet/
+│       ├── transcribe/
+│       ├── vercel-deploy/
+│       └── yeet/
 ├── README.md
 └── contributing.md
 ```

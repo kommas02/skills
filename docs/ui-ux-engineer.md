@@ -3,6 +3,31 @@
 ## Completed Work
 
 ### 2026-02-26
+**Issue**: AGENTS.md project structure only listed 17 curated skills, but 31 exist
+
+**Solution**: Updated AGENTS.md to include all 31 curated skills in the project structure diagram
+
+**Skills added to documentation**:
+- growth-innovation-strategist
+- playwright
+- render-deploy
+- screenshot
+- security-best-practices
+- security-ownership-map
+- security-threat-model
+- sentry
+- sora
+- speech
+- spreadsheet
+- transcribe
+- vercel-deploy
+- yeet
+
+**Impact**: Documentation now accurately represents the repository structure, improving user navigation and expectations
+
+---
+
+### 2026-02-26
 **Issue**: AGENTS.md references non-existent `evaluation-framework.md` in docs/ directory
 
 **Solution**: Removed broken reference from AGENTS.md project structure - the file `evaluation-framework.md` doesn't exist and was never created
