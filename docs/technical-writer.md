@@ -5,6 +5,13 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 
 ## Completed Work
 
+### 2026-02-26
+- **PR #67**: Add skill template with standardized sections
+  - Created `docs/skill-template.md` defining REQUIRED, RECOMMENDED, and OPTIONAL sections
+  - Provides templates and examples for skill structure
+  - Includes auditing checklist for skill validation
+  - Addresses issue #37
+
 ### 2026-02-25
 - **PR #31**: Standardize directory naming and license file conventions
   - Renamed `reference/` to `references/` in 3 skills (notion-knowledge-capture, notion-meeting-intelligence, notion-research-documentation)
