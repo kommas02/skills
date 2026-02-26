@@ -48,6 +48,7 @@ All of these scripts use network, so when running in the sandbox, request escala
 - Installs into `$CODEX_HOME/skills/<skill-name>` (defaults to `~/.codex/skills`).
 - Multiple `--path` values install multiple skills in one run, each named from the path basename unless `--name` is supplied.
 - Options: `--ref <ref>` (default `main`), `--dest <path>`, `--method auto|download|git`.
+- **Dependency Resolution**: When installing multiple skills, the installer parses each skill's `skill.json` for a `dependencies` array and installs them in the correct order. Circular dependencies are detected and reported as errors.
 
 ## Notes
 
