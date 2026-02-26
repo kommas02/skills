@@ -1,0 +1,4 @@
+interface:
+  display_name: "Growth Innovation Strategist"
+  short_description: "Use when analyzing repositories for growth opportunities, innovation strategies, and strategic improvements."
+  default_prompt: "Analyze this repository for growth opportunities and innovation strategies."

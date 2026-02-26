@@ -111,11 +111,6 @@ Agent configuration for Codex integration.
 - Use **plural** form for directories: `references/`, `examples/`, `evaluations/`
 - Do NOT use singular form: `reference/`, `example/`, `evaluation/`
 
-### Current Inconsistencies
-The following skills use singular `reference/` (should be `references/`):
-- notion-knowledge-capture
-- notion-meeting-intelligence
-
 ## Quality Standards
 
 ### skill.json Validation
@@ -129,8 +124,6 @@ Run validation with:
 ```bash
 node scripts/validate-skill-json.js
 ```
-
-CI validates skill.json via `.github/workflows/skill-json-validate.yml`.
 
 ## Telemetry (Optional)
 
