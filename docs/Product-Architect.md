@@ -57,6 +57,13 @@ The Product-Architect domain focuses on:
 
 ## Standards
 
+### Required Skill Files
+All skills must include:
+- `SKILL.md` - Main skill definition with frontmatter
+- `skill.json` - Metadata for discovery and versioning
+- `LICENSE.txt` - License file
+- `agents/openai.yaml` - Codex agent configuration
+
 ### skill.json Requirements
 - All skills MUST have valid skill.json
 - Description length: 10-200 characters
@@ -65,4 +72,4 @@ The Product-Architect domain focuses on:
 
 ### CI Validation
 - Validation script (`scripts/validate-skill-json.js`) uses JSON Schema draft-07
-- Note: `.github/workflows/skill-json-validate.yml` was planned but not implemented (QA domain)
+- Run validation: `node scripts/validate-skill-json.js`
