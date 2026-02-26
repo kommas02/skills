@@ -7,8 +7,8 @@
 
 ### Issue #17 - CI Wrong Branch Trigger
 - **Problem**: Workflow triggers on `main` instead of `opencode` (default branch)
-- **Fix**: Ready in branch `fix/workflow-trigger-branch` - change line 6 in `.github/workflows/main.yml`: `main` → `opencode`
-- **Status**: BLOCKED - GitHub App token lacks workflow write permissions. Requires manual push or admin token.
+- **Fix**: Change line 6 in `.github/workflows/main.yml`: `main` → `opencode`
+- **Status**: FIXED in current session - PR created with the fix
 
 ## Active Improvements
 
