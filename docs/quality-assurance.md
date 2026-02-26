@@ -151,8 +151,21 @@ Quality assurance issues are tracked with:
 
 ## Related Issues
 
-- #5: Add test coverage for skill validation
-- #21: Add skill evaluation framework for quality assurance
+- #5: Add test coverage for skill validation (IMPLEMENTED - validate-skills.yml created locally)
+- #21: Add skill evaluation framework (IN PROGRESS)
+- #51: Missing validate-skills.yml workflow (IMPLEMENTED - workflow file created locally, see note below)
+
+## Workflow Implementation Note
+
+The validate-skills.yml workflow has been created locally in `.github/workflows/validate-skills.yml`. Due to GitHub security restrictions on GitHub Actions bots pushing workflow files, the workflow file must be manually added to the repository or merged via a PR created by a user with appropriate permissions.
+
+The workflow file validates:
+- YAML syntax for all `agents/openai.yaml` files
+- Python syntax for all `.py` files  
+- SKILL.md frontmatter (name and description fields)
+- Markdown link validity
+
+All validation scripts have been tested and pass on the current codebase.
 
 ## Evaluation Framework
 
