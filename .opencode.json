@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "ai-agent-engineer": {
+      "description": "Specialist for AI agent engineering - skill orchestration, agent configuration, and agent workflow optimization",
+      "mode": "primary",
+      "model": "opencode/minimax-m2.5-free",
+      "temperature": 0.3,
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "glob": true,
+        "grep": true,
+        "bash": true,
+        "webfetch": true,
+        "websearch": true,
+        "codesearch": true,
+        "task": true,
+        "question": true,
+        "skill": true
+      }
+    },
+    "skill-evaluator": {
+      "description": "Evaluates skill quality and test coverage",
+      "mode": "subagent",
+      "model": "opencode/minimax-m2.5-free",
+      "temperature": 0.2,
+      "tools": {
+        "read": true,
+        "glob": true,
+        "grep": true,
+        "bash": true
+      }
+    }
+  },
+  "skill": {
+    "enabled": true,
+    "autoLoad": true
+  }
+}
