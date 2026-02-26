@@ -28,6 +28,7 @@
   - notion-meeting-intelligence
   - notion-research-documentation
   - notion-spec-to-implementation
+- PR #38: Expanded .gitignore with common development files (Node.js, Python, IDE, env files, logs, temp files)
 
 ## Open Issues
 - Issue #4: Standardize license file (NOTICE.txt vs LICENSE.txt)
