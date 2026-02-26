@@ -3,6 +3,15 @@
 ## Completed Work
 
 ### 2026-02-26
+**Issue**: AGENTS.md references non-existent `evaluation-framework.md` in docs/ directory
+
+**Solution**: Removed broken reference from AGENTS.md project structure - the file `evaluation-framework.md` doesn't exist and was never created
+
+**Impact**: Fixed documentation inconsistency - docs/ directory now accurately represented in AGENTS.md
+
+---
+
+### 2026-02-26
 **Issue**: Missing required LICENSE.txt file in `growth-innovation-strategist` skill
 
 **Solution**: Added Apache 2.0 LICENSE.txt to match all other 30 skills
