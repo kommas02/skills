@@ -12,7 +12,7 @@ The repository includes validation scripts in `.github/scripts/`:
 - `.github/scripts/validate_python.py` - Validates Python syntax
 - `.github/scripts/validate_links.py` - Validates markdown links
 
-### GitHub Actions Workflow: validate-skills.yml ✅ IMPLEMENTED
+### GitHub Actions Workflow: validate-skills.yml
 
 The repository includes an automated validation workflow at `.github/workflows/validate-skills.yml` that runs on:
 - Every pull request modifying files in the `skills/` directory
@@ -161,14 +161,14 @@ See [docs/evaluation-framework.md](evaluation-framework.md) for the complete eva
 ### Quick Summary
 
 - **Purpose**: Test skill quality, accuracy, and effectiveness
-- **Location**: Each skill's `evaluation/` directory
+- **Location**: Each skill's `evaluations/` directory
 - **Minimum Required**: 2 evaluation cases per skill
 - **Runner**: `scripts/evaluate_skill.py`
 
 ### Adding Evaluations
 
 ```bash
-mkdir -p skills/my-skill/evaluation/cases
+mkdir -p skills/my-skill/evaluations
 # Add case JSON files...
 # Add config.json...
 ```
