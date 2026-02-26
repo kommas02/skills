@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/minimax-m2.5-free",
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "experimental-*": "ask"
+    }
+  },
+  "agent": {
+    "plan": {
+      "model": "opencode/minimax-m2.5-free"
+    },
+    "build": {
+      "model": "opencode/minimax-m2.5-free"
+    },
+    "explore": {
+      "model": "opencode/minimax-m2.5-free"
+    }
+  }
+}
