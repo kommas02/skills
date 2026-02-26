@@ -1,0 +1,19 @@
+{
+  "name": "doc-test",
+  "version": "1.0.0",
+  "description": "Test skill with dependency on doc skill for verifying dependency resolution system",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": ["doc"],
+  "tags": [
+    "test",
+    "dependency-test"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/doc-test",
+  "repository": "https://github.com/kommas02/skills"
+}

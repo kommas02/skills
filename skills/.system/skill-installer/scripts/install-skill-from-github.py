@@ -59,19 +59,21 @@ def _detect_circular_dependencies(
     skill_name: str,
     dependency_graph: dict[str, list[str]],
     visited: set[str],
-    rec_stack: set[str],
+    path: list[str],
 ) -> list[str]:
     visited.add(skill_name)
-    rec_stack.add(skill_name)
+    path.append(skill_name)
     
     for dep in dependency_graph.get(skill_name, []):
         if dep not in visited:
-            cycle = _detect_circular_dependencies(dep, dependency_graph, visited, rec_stack.copy())
+            cycle = _detect_circular_dependencies(dep, dependency_graph, visited, path)
             if cycle:
                 return cycle
-        elif dep in rec_stack:
-            return [dep, skill_name]
+        elif dep in path:
+            idx = path.index(dep)
+            return path[idx:] + [dep]
     
+    path.pop()
     return []
 
 
@@ -92,8 +94,8 @@ def _resolve_dependencies(
     
     for skill_name in dependency_graph:
         visited: set[str] = set()
-        rec_stack: set[str] = set()
-        cycle = _detect_circular_dependencies(skill_name, dependency_graph, visited, rec_stack)
+        path: list[str] = []
+        cycle = _detect_circular_dependencies(skill_name, dependency_graph, visited, path)
         if cycle:
             raise InstallError(f"Circular dependency detected: {' -> '.join(cycle + [cycle[0]])}")
     
