@@ -1,5 +1,6 @@
 ---
 name: "doc"
+version: "1.0.0"
 description: "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks."
 ---
 

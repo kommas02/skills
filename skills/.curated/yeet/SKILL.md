@@ -1,5 +1,6 @@
 ---
 name: "yeet"
+version: "1.0.0"
 description: "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`)."
 ---
 

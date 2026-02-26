@@ -1,5 +1,6 @@
 ---
 name: render-deploy
+version: "1.0.0"
 description: Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.
 ---
 

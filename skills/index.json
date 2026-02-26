@@ -1,0 +1,326 @@
+{
+  "generated_at": "2026-02-26T00:15:07.780271+00:00",
+  "total_skills": 32,
+  "skills": [
+    {
+      "name": "skill-creator",
+      "version": "1.0.0",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "category": "system",
+      "path": ".system/skill-creator",
+      "display_name": "Skill Creator",
+      "short_description": "Create or update a skill",
+      "default_prompt": "Read my repository and create a skill to bootstrap new components for my project."
+    },
+    {
+      "name": "skill-installer",
+      "version": "1.0.0",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "category": "system",
+      "path": ".system/skill-installer",
+      "display_name": "Skill Installer",
+      "short_description": "Install curated skills from openai/skills or other repos",
+      "default_prompt": ""
+    },
+    {
+      "name": "cloudflare-deploy",
+      "version": "1.0.0",
+      "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+      "category": "curated",
+      "path": ".curated/cloudflare-deploy",
+      "display_name": "Cloudflare Deploy",
+      "short_description": "Deploy Workers, Pages, and platform services on Cloudflare",
+      "default_prompt": "Deploy this app to Cloudflare (Workers or Pages) and return URL, config, and required env vars."
+    },
+    {
+      "name": "develop-web-game",
+      "version": "1.0.0",
+      "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
+      "category": "curated",
+      "path": ".curated/develop-web-game",
+      "display_name": "Develop Web Game",
+      "short_description": "Web game dev + Playwright test loop",
+      "default_prompt": "Build and iterate a playable web game in this workspace, validating changes with a Playwright loop."
+    },
+    {
+      "name": "doc",
+      "version": "1.0.0",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "category": "curated",
+      "path": ".curated/doc",
+      "display_name": "Word Docs",
+      "short_description": "Edit and review docx files",
+      "default_prompt": "Edit or review this .docx file and return the updated file plus a concise change summary."
+    },
+    {
+      "name": "figma",
+      "version": "1.0.0",
+      "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
+      "category": "curated",
+      "path": ".curated/figma",
+      "display_name": "Figma",
+      "short_description": "Use Figma MCP for design-to-code work",
+      "default_prompt": "Use Figma MCP to inspect the target design and translate it into implementable UI decisions."
+    },
+    {
+      "name": "figma-implement-design",
+      "version": "1.0.0",
+      "description": "Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation). Trigger when the user provides Figma URLs or node IDs, or asks to implement designs or components that must match Figma specs. Requires a working Figma MCP server connection.",
+      "category": "curated",
+      "path": ".curated/figma-implement-design",
+      "display_name": "Figma Implement Design",
+      "short_description": "Turn Figma designs into production-ready code",
+      "default_prompt": "Implement this Figma design in this codebase, matching layout, states, and responsive behavior."
+    },
+    {
+      "name": "gh-address-comments",
+      "version": "1.0.0",
+      "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+      "category": "curated",
+      "path": ".curated/gh-address-comments",
+      "display_name": "GitHub Address Comments",
+      "short_description": "Address comments in a GitHub PR review\"",
+      "default_prompt": "Address all actionable GitHub PR review comments in this branch and summarize the updates."
+    },
+    {
+      "name": "gh-fix-ci",
+      "version": "1.0.0",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+      "category": "curated",
+      "path": ".curated/gh-fix-ci",
+      "display_name": "GitHub Fix CI",
+      "short_description": "Debug failing GitHub Actions CI",
+      "default_prompt": "Inspect failing GitHub Actions checks in this repo, summarize root cause, and propose a focused fix plan."
+    },
+    {
+      "name": "imagegen",
+      "version": "1.0.0",
+      "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
+      "category": "curated",
+      "path": ".curated/imagegen",
+      "display_name": "Image Gen",
+      "short_description": "Generate and edit images using OpenAI",
+      "default_prompt": "Generate or edit images for this task and return the final prompt plus selected outputs."
+    },
+    {
+      "name": "jupyter-notebook",
+      "version": "1.0.0",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "category": "curated",
+      "path": ".curated/jupyter-notebook",
+      "display_name": "Jupyter Notebooks",
+      "short_description": "Create Jupyter notebooks for experiments and tutorials",
+      "default_prompt": "Create a Jupyter notebook for this task with clear sections, runnable cells, and concise takeaways."
+    },
+    {
+      "name": "linear",
+      "version": "1.0.0",
+      "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.",
+      "category": "curated",
+      "path": ".curated/linear",
+      "display_name": "Linear",
+      "short_description": "Manage Linear issues in Codex",
+      "default_prompt": "Use Linear context to triage or update relevant issues for this task, with clear next actions."
+    },
+    {
+      "name": "netlify-deploy",
+      "version": "1.0.0",
+      "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+      "category": "curated",
+      "path": ".curated/netlify-deploy",
+      "display_name": "Netlify Deploy",
+      "short_description": "Deploy web projects to Netlify with the Netlify CLI",
+      "default_prompt": "Deploy this project to Netlify and return the preview URL, build settings, and any required fixes."
+    },
+    {
+      "name": "notion-knowledge-capture",
+      "version": "1.0.0",
+      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "category": "curated",
+      "path": ".curated/notion-knowledge-capture",
+      "display_name": "Notion Knowledge Capture",
+      "short_description": "Capture conversations into structured Notion pages",
+      "default_prompt": "Capture this conversation into structured Notion pages with decisions, action items, and owners when known."
+    },
+    {
+      "name": "notion-meeting-intelligence",
+      "version": "1.0.0",
+      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "category": "curated",
+      "path": ".curated/notion-meeting-intelligence",
+      "display_name": "Notion Meeting Intelligence",
+      "short_description": "Prep meetings with Notion context and tailored agendas",
+      "default_prompt": "Prepare this meeting from Notion context with a brief, agenda, decisions needed, and open questions."
+    },
+    {
+      "name": "notion-research-documentation",
+      "version": "1.0.0",
+      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "category": "curated",
+      "path": ".curated/notion-research-documentation",
+      "display_name": "Notion Research & Documentation",
+      "short_description": "Research Notion content and produce briefs/reports",
+      "default_prompt": "Research this topic in Notion and produce a sourced brief with clear recommendations."
+    },
+    {
+      "name": "notion-spec-to-implementation",
+      "version": "1.0.0",
+      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "category": "curated",
+      "path": ".curated/notion-spec-to-implementation",
+      "display_name": "Notion Spec to Implementation",
+      "short_description": "Turn Notion specs into implementation plans, tasks, and progress tracking",
+      "default_prompt": "Turn this Notion spec into an implementation plan with milestones, tasks, and dependencies."
+    },
+    {
+      "name": "openai-docs",
+      "version": "1.0.0",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "category": "curated",
+      "path": ".curated/openai-docs",
+      "display_name": "OpenAI Docs",
+      "short_description": "Reference the official OpenAI Developer docs",
+      "default_prompt": "Look up official OpenAI docs for this task and answer with concise, cited guidance."
+    },
+    {
+      "name": "pdf",
+      "version": "1.0.0",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "category": "curated",
+      "path": ".curated/pdf",
+      "display_name": "PDF Skill",
+      "short_description": "Create, edit, and review PDFs",
+      "default_prompt": "Create, edit, or review this PDF and summarize the key output or changes."
+    },
+    {
+      "name": "playwright",
+      "version": "1.0.0",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "category": "curated",
+      "path": ".curated/playwright",
+      "display_name": "Playwright CLI Skill",
+      "short_description": "Automate real browsers from the terminal",
+      "default_prompt": "Automate this browser workflow with Playwright and produce a reliable script with run steps."
+    },
+    {
+      "name": "render-deploy",
+      "version": "1.0.0",
+      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "category": "curated",
+      "path": ".curated/render-deploy",
+      "display_name": "Render Deploy",
+      "short_description": "Deploy applications to Render via Blueprints or MCP",
+      "default_prompt": "Deploy this application to Render and provide service URL, env vars, and next checks."
+    },
+    {
+      "name": "screenshot",
+      "version": "1.0.0",
+      "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+      "category": "curated",
+      "path": ".curated/screenshot",
+      "display_name": "Screenshot Capture",
+      "short_description": "Capture screenshots",
+      "default_prompt": "Capture the right screenshot for this task (target, area, and output path)."
+    },
+    {
+      "name": "security-best-practices",
+      "version": "1.0.0",
+      "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+      "category": "curated",
+      "path": ".curated/security-best-practices",
+      "display_name": "Security Best Practices",
+      "short_description": "Security reviews and secure-by-default guidance",
+      "default_prompt": "Review this codebase for security best practices and suggest secure-by-default improvements."
+    },
+    {
+      "name": "security-ownership-map",
+      "version": "1.0.0",
+      "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions.",
+      "category": "curated",
+      "path": ".curated/security-ownership-map",
+      "display_name": "Security Ownership Map",
+      "short_description": "Map maintainers, bus factor, and sensitive code ownership",
+      "default_prompt": "Build a security ownership map for this repository and identify bus-factor risks in sensitive code."
+    },
+    {
+      "name": "security-threat-model",
+      "version": "1.0.0",
+      "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.",
+      "category": "curated",
+      "path": ".curated/security-threat-model",
+      "display_name": "Security Threat Model",
+      "short_description": "Repo-grounded threat modeling and abuse-path analysis",
+      "default_prompt": "Create a repository-grounded threat model for this codebase with prioritized abuse paths and mitigations."
+    },
+    {
+      "name": "sentry",
+      "version": "1.0.0",
+      "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`.",
+      "category": "curated",
+      "path": ".curated/sentry",
+      "display_name": "Sentry (Read-only Observability)",
+      "short_description": "Read-only Sentry observability",
+      "default_prompt": "Investigate this issue in read-only Sentry data and report likely root cause, impact, and next steps."
+    },
+    {
+      "name": "sora",
+      "version": "1.0.0",
+      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\\u2019s video API using the bundled CLI (`scripts/sora.py`), including requests like \\u201cgenerate AI video,\\u201d \\u201cSora,\\u201d \\u201cvideo remix,\\u201d \\u201cdownload video/thumbnail/spritesheet,\\u201d and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "category": "curated",
+      "path": ".curated/sora",
+      "display_name": "Sora Video Generation Skill",
+      "short_description": "Generate and manage Sora videos",
+      "default_prompt": "Plan and generate a Sora video for this request, then iterate with concrete prompt edits."
+    },
+    {
+      "name": "speech",
+      "version": "1.0.0",
+      "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+      "category": "curated",
+      "path": ".curated/speech",
+      "display_name": "Speech Generation Skill",
+      "short_description": "Generate narrated audio from text",
+      "default_prompt": "Generate spoken audio for this text with the right voice style, pacing, and output format."
+    },
+    {
+      "name": "spreadsheet",
+      "version": "1.0.0",
+      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.",
+      "category": "curated",
+      "path": ".curated/spreadsheet",
+      "display_name": "Spreadsheet Skill (Create, Edit, Analyze, Visualize)",
+      "short_description": "Create, edit, and analyze spreadsheets",
+      "default_prompt": "Create or update a spreadsheet for this task with the right formulas, structure, and formatting."
+    },
+    {
+      "name": "transcribe",
+      "version": "1.0.0",
+      "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+      "category": "curated",
+      "path": ".curated/transcribe",
+      "display_name": "Audio Transcribe",
+      "short_description": "Transcribe audio using OpenAI, with optional speaker diarization when requested. Prefer the bundled CLI for deterministic, repeatable runs.",
+      "default_prompt": "Transcribe this audio or video, include speaker labels when possible, and provide a clean summary."
+    },
+    {
+      "name": "vercel-deploy",
+      "version": "1.0.0",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "category": "curated",
+      "path": ".curated/vercel-deploy",
+      "display_name": "Vercel Deploy",
+      "short_description": "Deploy apps and agents with zero configuration on Vercel. No account required.",
+      "default_prompt": "Create a Vercel deployment for this project and share the URL."
+    },
+    {
+      "name": "yeet",
+      "version": "1.0.0",
+      "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
+      "category": "curated",
+      "path": ".curated/yeet",
+      "display_name": "Yeet",
+      "short_description": "Stage, commit, and open PR",
+      "default_prompt": "Prepare this branch for review: stage intended changes, write a focused commit, and open a PR."
+    }
+  ]
+}
