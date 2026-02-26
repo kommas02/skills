@@ -18,6 +18,11 @@ Documentation improvements, consistency fixes, naming standardization for skill 
   - Addresses issue #37
   - **Audit completed**: All 31 curated skills meet minimum template requirements
 
+- **Issue #37**: Closed - work completed via PR #67
+  - Verified all template requirements are in place
+  - All skills have proper frontmatter, SKILL.md, and LICENSE.txt
+  - skill-creator references the template for new skill creation
+
 ### 2026-02-25
 - **PR #31**: Standardize directory naming and license file conventions
   - Renamed `reference/` to `references/` in 3 skills (notion-knowledge-capture, notion-meeting-intelligence, notion-research-documentation)
