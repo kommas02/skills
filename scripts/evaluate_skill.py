@@ -92,7 +92,7 @@ def evaluate_skill(skill_path: Path, verbose: bool = False) -> Dict[str, Any]:
         result = evaluate_case(case)
         results.append(result)
         if verbose:
-            print(f"  Case {case['id']}: {'PASSED' if result['passed'] else 'FAILED'}")
+            print(f"  Case {result['case_id']}: {'PASSED' if result['passed'] else 'FAILED'}")
     
     all_passed = all(r.get('passed', True) for r in results)
     
