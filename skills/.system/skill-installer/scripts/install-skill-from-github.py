@@ -15,6 +15,7 @@ import urllib.parse
 import zipfile
 
 from github_utils import github_request
+import json
 DEFAULT_REF = "opencode"
 
 
@@ -40,6 +41,81 @@ class Source:
 
 class InstallError(Exception):
     pass
+
+
+def _load_skill_json(skill_path: str) -> dict | None:
+    skill_json_path = os.path.join(skill_path, "skill.json")
+    if os.path.isfile(skill_json_path):
+        with open(skill_json_path, "r") as f:
+            return json.load(f)
+    return None
+
+
+def _get_dependencies(skill_json: dict) -> list[str]:
+    return skill_json.get("dependencies", []) or []
+
+
+def _detect_circular_dependencies(
+    skill_name: str,
+    dependency_graph: dict[str, list[str]],
+    visited: set[str],
+    rec_stack: set[str],
+) -> list[str]:
+    visited.add(skill_name)
+    rec_stack.add(skill_name)
+    
+    for dep in dependency_graph.get(skill_name, []):
+        if dep not in visited:
+            cycle = _detect_circular_dependencies(dep, dependency_graph, visited, rec_stack.copy())
+            if cycle:
+                return cycle
+        elif dep in rec_stack:
+            return [dep, skill_name]
+    
+    return []
+
+
+def _resolve_dependencies(
+    skills_to_install: list[tuple[str, str]],
+    repo_root: str,
+) -> list[tuple[str, str]]:
+    dependency_graph: dict[str, list[str]] = {}
+    skill_paths: dict[str, str] = {}
+    
+    for skill_name, skill_path in skills_to_install:
+        full_path = os.path.join(repo_root, skill_path)
+        skill_json = _load_skill_json(full_path)
+        if skill_json:
+            deps = _get_dependencies(skill_json)
+            dependency_graph[skill_name] = deps
+            skill_paths[skill_name] = skill_path
+    
+    for skill_name in dependency_graph:
+        visited: set[str] = set()
+        rec_stack: set[str] = set()
+        cycle = _detect_circular_dependencies(skill_name, dependency_graph, visited, rec_stack)
+        if cycle:
+            raise InstallError(f"Circular dependency detected: {' -> '.join(cycle + [cycle[0]])}")
+    
+    installed = set(skill_name for skill_name, _ in skills_to_install)
+    resolved: list[tuple[str, str]] = []
+    remaining = list(skills_to_install)
+    
+    while remaining:
+        made_progress = False
+        for skill_name, skill_path in list(remaining):
+            deps = dependency_graph.get(skill_name, [])
+            if all(dep in installed or dep in [s for s, _ in resolved] for dep in deps):
+                resolved.append((skill_name, skill_path))
+                installed.add(skill_name)
+                remaining.remove((skill_name, skill_path))
+                made_progress = True
+        
+        if not made_progress:
+            unresolved = [name for name, _ in remaining]
+            raise InstallError(f"Could not resolve dependencies for: {unresolved}")
+    
+    return resolved
 
 
 def _codex_home() -> str:
@@ -279,7 +355,7 @@ def main(argv: list[str]) -> int:
         tmp_dir = tempfile.mkdtemp(prefix="skill-install-", dir=_tmp_root())
         try:
             repo_root = _prepare_repo(source, args.method, tmp_dir)
-            installed = []
+            skills_to_install = []
             for path in source.paths:
                 skill_name = args.name if len(source.paths) == 1 else None
                 skill_name = skill_name or os.path.basename(path.rstrip("/"))
@@ -291,6 +367,14 @@ def main(argv: list[str]) -> int:
                     raise InstallError(f"Destination already exists: {dest_dir}")
                 skill_src = os.path.join(repo_root, path)
                 _validate_skill(skill_src)
+                skills_to_install.append((skill_name, path))
+            
+            resolved_order = _resolve_dependencies(skills_to_install, repo_root)
+            
+            installed = []
+            for skill_name, path in resolved_order:
+                dest_dir = os.path.join(dest_root, skill_name)
+                skill_src = os.path.join(repo_root, path)
                 _copy_skill(skill_src, dest_dir)
                 installed.append((skill_name, dest_dir))
         finally:

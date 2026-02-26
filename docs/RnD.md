@@ -1,5 +1,20 @@
 # RnD Documentation
 
+## Session 2026-02-26
+
+### Issue #97 - Skill Dependency Resolution System
+- **Problem**: Skills operate independently with no mechanism to declare dependencies
+- **Solution**: Added dependency resolution to skill-installer
+- **Implementation**:
+  - Added `_load_skill_json()` function to parse skill.json
+  - Added `_get_dependencies()` to extract dependencies array
+  - Added `_detect_circular_dependencies()` for circular dependency detection
+  - Added `_resolve_dependencies()` for topological sort of dependencies
+  - Modified main() to resolve and install skills in dependency order
+- **Files Changed**: 
+  - `skills/.system/skill-installer/scripts/install-skill-from-github.py`
+  - `skills/.system/skill-installer/SKILL.md` (documentation update)
+
 ## Session 2026-02-25
 
 ### Review Status
