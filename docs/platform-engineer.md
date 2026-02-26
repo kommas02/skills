@@ -31,5 +31,6 @@
 - PR #38: Expanded .gitignore with common development files (Node.js, Python, IDE, env files, logs, temp files)
 
 ## Open Issues
+- Issue #17: Fix CI triggers on wrong branch - main instead of opencode
 - Issue #4: Standardize license file (NOTICE.txt vs LICENSE.txt)
 - Issue #3: Standardize directory naming (COMPLETED)
