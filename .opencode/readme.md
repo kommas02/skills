@@ -78,6 +78,24 @@ opencode
 
 This will analyze your project and create an `AGENTS.md` file.
 
+## oh-my-opencode (Advanced)
+
+For enhanced AI agent capabilities with multi-provider support, consider installing [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode):
+
+### For LLM Agents
+
+```bash
+bunx oh-my-opencode install
+```
+
+This plugin provides:
+- Multi-provider support (Anthropic Claude, OpenAI, Google Gemini, GitHub Copilot)
+- Automatic provider fallback
+- Model optimization per agent type
+- Authentication management
+
+See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for details.
+
 ## Configuration
 
 ### opencode.json
