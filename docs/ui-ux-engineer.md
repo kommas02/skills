@@ -2,6 +2,16 @@
 
 ## Completed Work
 
+### 2026-02-26
+**Issue**: README.md references non-existent .experimental folder
+
+**Solution**: Removed all references to `skills/.experimental/` from README.md since the folder doesn't exist and creates confusion for contributors.
+
+**Files updated**:
+- README.md
+
+**Impact**: Improved documentation consistency, eliminated misleading references to non-existent folder structure.
+
 ### 2026-02-25
 **Issue**: Standardize directory naming: reference/ vs references/ inconsistency
 
