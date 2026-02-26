@@ -9,6 +9,8 @@ This document outlines the quality assurance practices for the skills repository
 The repository includes validation scripts in `.github/scripts/`:
 - `.github/scripts/validate_openai.py` - Validates openai.yaml structure
 - `.github/scripts/validate_skill.py` - Validates SKILL.md frontmatter
+- `.github/scripts/validate_python.py` - Validates Python syntax
+- `.github/scripts/validate_links.py` - Validates markdown links
 
 ### GitHub Actions Workflow: validate-skills.yml ✅ IMPLEMENTED
 
