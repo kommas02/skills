@@ -112,33 +112,28 @@ Required fields:
 - `name`: Lowercase, hyphen-separated skill identifier
 - `description`: Clear explanation of skill purpose and trigger conditions
 
-## Running Validation Locally
+## Self-Reflection
 
-### Validate YAML Files
+### What Worked
+- Created validation scripts that can run locally and in CI
+- Updated documentation to be accurate about current state
+- Found that skill-installer is missing default_prompt field in openai.yaml
 
-```bash
-python -c "import yaml; yaml.safe_load(open('path/to/openai.yaml'))"
-```
+### What Didn't Work
+- GitHub App token lacks "workflows" permission - cannot push workflow files directly
+- Could not create validate-skills.yml workflow file due to permission restriction
+- Workaround: Added scripts that can be called manually or via other means
 
-### Validate Python Syntax
+### Teamwork Notes
+- Coordination with DX-engineer needed for workflow automation
+- Consider adding QA workflow permission to GitHub App
+- Validation scripts provide foundation for future CI/CD
 
-```bash
-python -m py_compile path/to/script.py
-```
-
-### Validate SKILL.md
-
-```bash
-# Check frontmatter
-head -n 1 SKILL.md  # Should be ---
-```
-
-### Run Full Validation
-
-```bash
-# Trigger the workflow manually
-gh workflow run validate-skills.yml
-```
+### Next Steps
+1. Request GitHub App workflow permission
+2. Create validate-skills.yml using provided template
+3. Add evaluation framework (issue #21)
+4. Fix skill-installer missing field
 
 ## Issue Tracking
 
