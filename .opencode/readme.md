@@ -43,6 +43,24 @@ Or using npm:
 npm install -g opencode-ai
 ```
 
+Or using Bun:
+
+```bash
+bun install -g opencode-ai
+```
+
+Or using pnpm:
+
+```bash
+pnpm install -g opencode-ai
+```
+
+Or using Yarn:
+
+```bash
+yarn global add opencode-ai
+```
+
 ### Verify Installation
 
 ```bash
