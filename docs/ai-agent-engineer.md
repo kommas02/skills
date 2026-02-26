@@ -66,11 +66,13 @@ INIT → PLAN → IMPLEMENT → VERIFY → SELF-REFLECTION → DELIVER (PR)
 
 ## Configuration Files
 
-### opencode.json
+### opencode.json (project root)
 Main configuration file located in project root:
 - Model configuration (`opencode/minimax-m2.5-free`)
 - Agent definitions (13 custom agents)
 - Tool permissions
+
+Note: `.opencode/opencode.json` should be kept in sync with root `opencode.json`.
 
 ### .opencode/agents/
 Markdown-based agent definitions:
