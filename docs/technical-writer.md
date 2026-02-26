@@ -6,6 +6,10 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 ## Completed Work
 
 ### 2026-02-26
+- **PR #111**: Regenerate skills index
+  - Ran `scripts/generate_skill_index.py` to update generated_at timestamp
+  - Verified all 33 skills are properly indexed
+
 - **PR #89**: Add skill-template reference in skill-creator
   - Added link to `docs/skill-template.md` in skill-creator's "Anatomy of a Skill" section
   - Ensures new skill creators discover the standardized template
