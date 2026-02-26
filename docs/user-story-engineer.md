@@ -35,5 +35,5 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
 ## Related Domains
 - Technical-Writer: Blueprint and architectural documentation
 - DX-Engineer: Developer experience and tooling
-- Product-Arhitect: System architecture and skill schema
+- Product-Architect: System architecture and skill schema
 - Quality-Assurance: Evaluation frameworks and testing
