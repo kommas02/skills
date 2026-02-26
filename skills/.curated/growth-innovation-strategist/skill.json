@@ -1,0 +1,30 @@
+{
+  "name": "growth-innovation-strategist",
+  "version": "1.0.0",
+  "description": "Use when analyzing repositories for growth opportunities, innovation strategies, and strategic improvements. Helps identify leverage points, automation opportunities, and measurable improvements.",
+  "category": ".curated",
+  "author": {
+    "name": "OpenAI",
+    "email": "support@openai.com",
+    "url": "https://openai.com"
+  },
+  "capabilities": [
+    "repository-analysis",
+    "growth-opportunity-identification",
+    "innovation-strategy",
+    "dx-improvement",
+    "strategic-planning"
+  ],
+  "dependencies": [],
+  "tags": [
+    "growth",
+    "innovation",
+    "strategy",
+    "dx",
+    "analysis",
+    "automation"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/openai/skills/tree/main/skills/.curated/growth-innovation-strategist",
+  "repository": "https://github.com/openai/skills"
+}
