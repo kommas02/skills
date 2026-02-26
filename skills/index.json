@@ -1,0 +1,320 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T05:19:38.444119Z",
+  "total_skills": 33,
+  "skills": [
+    {
+      "name": "cloudflare-deploy",
+      "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/cloudflare-deploy",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "develop-web-game",
+      "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/develop-web-game",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "doc",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/doc",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "figma",
+      "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/figma",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "figma-implement-design",
+      "description": "Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation). Trigger when the user provides Figma URLs or node IDs, or asks to implement designs or components that must match Figma specs. Requires a working Figma MCP server connection.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/figma-implement-design",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "gh-address-comments",
+      "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/gh-address-comments",
+      "metadata": {
+        "short-description": "Address comments in a GitHub PR review"
+      },
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "gh-fix-ci",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/gh-fix-ci",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "growth-innovation-strategist",
+      "description": "Use when analyzing repositories for growth opportunities, innovation strategies, and strategic improvements. Helps identify leverage points, automation opportunities, and measurable improvements.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/growth-innovation-strategist",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "imagegen",
+      "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/imagegen",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "jupyter-notebook",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/jupyter-notebook",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "linear",
+      "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/linear",
+      "metadata": {
+        "short-description": "Manage Linear issues in Codex"
+      },
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "netlify-deploy",
+      "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/netlify-deploy",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "notion-knowledge-capture",
+      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/notion-knowledge-capture",
+      "metadata": {
+        "short-description": "Capture conversations into structured Notion pages"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "notion-meeting-intelligence",
+      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/notion-meeting-intelligence",
+      "metadata": {
+        "short-description": "Prep meetings with Notion context and tailored agendas"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "notion-research-documentation",
+      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/notion-research-documentation",
+      "metadata": {
+        "short-description": "Research Notion content and produce briefs/reports"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "notion-spec-to-implementation",
+      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/notion-spec-to-implementation",
+      "metadata": {
+        "short-description": "Turn Notion specs into implementation plans, tasks, and progress tracking"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "openai-docs",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/openai-docs",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "pdf",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/pdf",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "playwright",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/playwright",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "render-deploy",
+      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/render-deploy",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "screenshot",
+      "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/screenshot",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "security-best-practices",
+      "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/security-best-practices",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "security-ownership-map",
+      "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/security-ownership-map",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "security-threat-model",
+      "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/security-threat-model",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "sentry",
+      "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/sentry",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "version": "1.0.0",
+      "category": "system",
+      "path": "skills/.system/skill-creator",
+      "metadata": {
+        "short-description": "Create or update a skill"
+      },
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "skill-installer",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "version": "1.0.0",
+      "category": "system",
+      "path": "skills/.system/skill-installer",
+      "metadata": {
+        "short-description": "Install curated skills from openai/skills or other repos"
+      },
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "sora",
+      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI’s video API using the bundled CLI (`scripts/sora.py`), including requests like “generate AI video,” “Sora,” “video remix,” “download video/thumbnail/spritesheet,” and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/sora",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "speech",
+      "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/speech",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "spreadsheet",
+      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/spreadsheet",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "transcribe",
+      "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/transcribe",
+      "metadata": {},
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "vercel-deploy",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/vercel-deploy",
+      "metadata": {},
+      "license": "MIT"
+    },
+    {
+      "name": "yeet",
+      "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/yeet",
+      "metadata": {},
+      "license": "Apache-2.0"
+    }
+  ]
+}
