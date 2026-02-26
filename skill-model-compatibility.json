@@ -1,0 +1,262 @@
+{
+  "version": "1.0.0",
+  "description": "Skill-model compatibility matrix for optimal AI model selection",
+  "models": {
+    "o1": {
+      "name": "o1",
+      "capabilities": ["reasoning", "large_context"],
+      "strengths": ["complex reasoning", "planning", "problem-solving"],
+      "best_for": ["architecture", "complex debugging", "strategic planning"]
+    },
+    "o3-mini": {
+      "name": "o3-mini",
+      "capabilities": ["reasoning", "function_calling", "fast"],
+      "strengths": ["fast reasoning", "coding", "tool use"],
+      "best_for": ["coding tasks", "quick iterations", "function calling workflows"]
+    },
+    "gpt-4o": {
+      "name": "gpt-4o",
+      "capabilities": ["vision", "function_calling", "large_context", "reasoning"],
+      "strengths": ["multimodal", "balanced", "tool use"],
+      "best_for": ["general tasks", "image understanding", "complex workflows"]
+    },
+    "gpt-4o-mini": {
+      "name": "gpt-4o-mini",
+      "capabilities": ["function_calling", "fast"],
+      "strengths": ["fast", "cost-effective", "tool use"],
+      "best_for": ["simple tasks", "quick edits", "low-latency requirements"]
+    },
+    "gpt-4-turbo": {
+      "name": "gpt-4-turbo",
+      "capabilities": ["vision", "large_context", "function_calling"],
+      "best_for": ["document analysis", "vision tasks", "long context needs"]
+    }
+  },
+  "skills": {
+    "skill-creator": {
+      "required_capabilities": ["reasoning"],
+      "recommended_models": ["o1", "gpt-4o"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Creating skills requires architectural thinking and planning"
+    },
+    "skill-installer": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Installing skills involves tool use and file operations"
+    },
+    "figma": {
+      "required_capabilities": ["vision", "function_calling"],
+      "recommended_models": ["gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Requires vision for design screenshots and function calling for Figma MCP"
+    },
+    "figma-implement-design": {
+      "required_capabilities": ["vision", "function_calling"],
+      "recommended_models": ["gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Design implementation requires vision to understand mockups"
+    },
+    "pdf": {
+      "required_capabilities": ["vision"],
+      "recommended_models": ["gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "PDF processing may require visual analysis of documents"
+    },
+    "imagegen": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Image generation uses external APIs via function calling"
+    },
+    "sora": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Video generation uses external APIs via function calling"
+    },
+    "speech": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Speech processing uses external APIs"
+    },
+    "screenshot": {
+      "required_capabilities": ["vision", "function_calling"],
+      "recommended_models": ["gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Screenshot analysis requires vision capabilities"
+    },
+    "playwright": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Browser automation via Playwright MCP"
+    },
+    "gh-address-comments": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "GitHub API interactions via function calling"
+    },
+    "gh-fix-ci": {
+      "required_capabilities": ["function_calling", "reasoning"],
+      "recommended_models": ["gpt-4o", "o1"],
+      "fallback_models": ["o3-mini"],
+      "notes": "CI debugging requires reasoning about logs and errors"
+    },
+    "linear": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Linear API interactions via function calling"
+    },
+    "notion-spec-to-implementation": {
+      "required_capabilities": ["reasoning", "large_context"],
+      "recommended_models": ["o1", "gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Converting specs to implementation requires understanding large specs"
+    },
+    "notion-knowledge-capture": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Notion API interactions for knowledge capture"
+    },
+    "notion-meeting-intelligence": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Notion API interactions for meeting notes"
+    },
+    "notion-research-documentation": {
+      "required_capabilities": ["function_calling", "large_context"],
+      "recommended_models": ["gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Research documentation may require large context"
+    },
+    "openai-docs": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "API interactions for documentation queries"
+    },
+    "doc": {
+      "required_capabilities": [],
+      "recommended_models": ["gpt-4o", "o3-mini", "gpt-4o-mini"],
+      "fallback_models": [],
+      "notes": "General documentation skill works with any model"
+    },
+    "jupyter-notebook": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Jupyter integration via function calling"
+    },
+    "cloudflare-deploy": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Cloudflare deployment via API"
+    },
+    "netlify-deploy": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Netlify deployment via API"
+    },
+    "vercel-deploy": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Vercel deployment via API"
+    },
+    "render-deploy": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Render deployment via API"
+    },
+    "sentry": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Sentry API integration for error tracking"
+    },
+    "develop-web-game": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Web game development with function calling for tools"
+    },
+    "spreadsheet": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Spreadsheet operations via API"
+    },
+    "transcribe": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Audio transcription via API"
+    },
+    "yeet": {
+      "required_capabilities": [],
+      "recommended_models": ["gpt-4o", "o3-mini", "gpt-4o-mini"],
+      "fallback_models": [],
+      "notes": "General utility skill works with any model"
+    },
+    "security-best-practices": {
+      "required_capabilities": ["reasoning"],
+      "recommended_models": ["o1", "gpt-4o"],
+      "fallback_models": [],
+      "notes": "Security analysis benefits from strong reasoning"
+    },
+    "security-ownership-map": {
+      "required_capabilities": ["function_calling"],
+      "recommended_models": ["gpt-4o", "o3-mini"],
+      "fallback_models": ["gpt-4o-mini"],
+      "notes": "Security mapping with graph database"
+    },
+    "security-threat-model": {
+      "required_capabilities": ["reasoning", "vision"],
+      "recommended_models": ["o1", "gpt-4o"],
+      "fallback_models": [],
+      "notes": "Threat modeling requires reasoning and diagram analysis"
+    },
+    "growth-innovation-strategist": {
+      "required_capabilities": ["reasoning", "large_context"],
+      "recommended_models": ["o1", "gpt-4o", "gpt-4-turbo"],
+      "fallback_models": [],
+      "notes": "Strategic analysis benefits from reasoning and context"
+    }
+  },
+  "use_cases": {
+    "general_coding": {
+      "recommended": ["gpt-4o", "o3-mini"],
+      "fallback": ["gpt-4o-mini"],
+      "description": "Standard coding tasks and iterations"
+    },
+    "complex_reasoning": {
+      "recommended": ["o1"],
+      "fallback": ["gpt-4o"],
+      "description": "Architecture, planning, debugging complex issues"
+    },
+    "vision_tasks": {
+      "recommended": ["gpt-4o", "gpt-4-turbo"],
+      "fallback": [],
+      "description": "Image understanding, design analysis, document OCR"
+    },
+    "cost_optimized": {
+      "recommended": ["gpt-4o-mini", "o3-mini"],
+      "fallback": [],
+      "description": "Simple tasks where cost/speed matters over capability"
+    },
+    "long_context": {
+      "recommended": ["gpt-4-turbo", "o1"],
+      "fallback": ["gpt-4o"],
+      "description": "Large document processing, extensive codebases"
+    }
+  }
+}

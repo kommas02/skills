@@ -7,6 +7,20 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Created growth-innovation-strategist skill in skills/.curated/growth-innovation-strategist/
 - Skill provides framework for analyzing repositories for growth/innovation opportunities
 - Focus on measurable outcomes, automation, and strategic leverage points
+- Created skill-model-compatibility.json - maps all skills to optimal AI model capabilities
+- Updated skill-creator template with model requirements guidance
+
+## Implementation Details
+### skill-model-compatibility.json
+- Maps all 33 skills to required model capabilities (vision, function_calling, reasoning, large_context)
+- Documents recommended/fallback models for each skill
+- Includes use case recommendations (general_coding, complex_reasoning, vision_tasks, etc.)
+- Machine-readable format for tool integration
+
+### Skill Template Updates
+- Added "Model Requirements" section to skill-creator SKILL.md
+- Documents common capability requirements with examples
+- References compatibility matrix for full details
 
 ## Insights & Patterns
 - Repository benefits from dedicated growth/innovation skill
