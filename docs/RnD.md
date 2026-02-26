@@ -10,7 +10,9 @@
 - All 32 skill YAML files use consistent structure with `interface` and `dependencies` keys
 - No validate-skills.yml workflow exists (Issue #51 - owned by QA)
 
-**Solution**: Address the .experimental folder inconsistency by either creating the folder or updating documentation.
+**Solution**: Removed .experimental references from README.md, created docs/RnD.md
+
+**PR**: [#59](https://github.com/kommas02/skills/pull/59)
 
 ## Domain Notes
 - RnD focuses on: documentation improvements, skill structure validation, repository health
