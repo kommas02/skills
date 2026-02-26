@@ -169,7 +169,7 @@ All validation scripts have been tested and pass on the current codebase.
 
 ## Evaluation Framework
 
-See [docs/evaluation-framework.md](evaluation-framework.md) for the complete evaluation framework documentation.
+See [evaluation-framework.md](evaluation-framework.md) for the complete evaluation framework documentation.
 
 ### Quick Summary
 

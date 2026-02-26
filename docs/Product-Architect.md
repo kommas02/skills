@@ -43,6 +43,24 @@ The Product-Architect domain focuses on:
 
 **Impact**: Documentation consistency within Product-Architect domain
 
+### Issue #52: Create .experimental folder
+**Status**: Completed
+
+**Changes**:
+1. Created `skills/.experimental/` directory (was referenced but didn't exist)
+2. Added `skills/.experimental/README.md` with documentation on experimental skills
+
+**Impact**: Documentation consistency - blueprint.md and schema already supported .experimental category
+
+### Issue #96: Fix broken reference in quality-assurance.md
+**Status**: Completed
+
+**Changes**:
+1. Fixed broken link in `docs/quality-assurance.md:159` 
+2. Changed `[docs/evaluation-framework.md](evaluation-framework.md)` to `[evaluation-framework.md](evaluation-framework.md)`
+
+**Impact**: Documentation link now works correctly
+
 ## Future Work
 
 ### Potential Improvements
@@ -54,6 +72,8 @@ The Product-Architect domain focuses on:
 - #20: Create skill metadata schema (COMPLETED)
 - #21: Add skill evaluation framework (QA domain)
 - #30: Add skill quality telemetry (Growth-Innovation-Strategist domain)
+- #52: Create .experimental folder (COMPLETED)
+- #96: Fix broken reference in quality-assurance.md (COMPLETED)
 
 ## Standards
 
