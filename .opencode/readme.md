@@ -24,6 +24,7 @@ OpenCode Zen is a curated list of tested and verified models provided by the Ope
 |-------|-------|--------|
 | MiniMax M2.5 Free | Free | Free |
 | Big Pickle | Free | Free |
+| GPT 5 Nano | Free | Free |
 
 - [OpenCode Zen Documentation](https://opencode.ai/docs/zen/)
 
@@ -95,6 +96,11 @@ This plugin provides:
 - Authentication management
 
 See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for details.
+
+### Provider Priority
+
+When using oh-my-opencode, the provider priority is:
+**Native (anthropic/, openai/, google/) > GitHub Copilot > OpenCode Zen > Z.ai Coding Plan**
 
 ## Configuration
 
@@ -183,12 +189,12 @@ SKILL.md must include frontmatter with:
 ```
 .opencode/
 ├── opencode.json    # Main configuration
-├── readme.md        # This file
-├── agents/          # Custom agent definitions
+├── readme.md       # This file
+├── agents/         # Custom agent definitions
 │   ├── ai-agent-engineer.md
 │   ├── skill-qa.md
 │   └── dx-engineer.md
-└── skills/          # Custom skill definitions
+└── skills/         # Custom skill definitions
     └── repo-manager/
         ├── SKILL.md
         └── LICENSE.txt
