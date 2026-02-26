@@ -124,6 +124,24 @@ A skill should only contain essential files that directly support its functional
 
 The skill should only contain the information needed for an AI agent to do the job at hand. It should not contain auxiliary context about the process that went into creating it, setup and testing procedures, user-facing documentation, etc. Creating additional documentation files just adds clutter and confusion.
 
+### Model Requirements
+
+When creating a skill, consider what AI model capabilities it requires for optimal performance. Reference `skill-model-compatibility.json` in the repository root for the full compatibility matrix.
+
+**Common capability requirements:**
+
+| Capability | Description | Skills that need it |
+|------------|-------------|-------------------|
+| `vision` | Image understanding, OCR, design analysis | figma, pdf, screenshot, figma-implement-design |
+| `function_calling` | API integrations, tool use | linear, notion-*, jupyter-notebook, deployments |
+| `reasoning` | Complex analysis, planning, architecture | skill-creator, gh-fix-ci, security-*, notion-spec-to-implementation |
+| `large_context` | Long document processing | notion-spec-to-implementation, growth-innovation-strategist |
+
+**Best practices:**
+- Document required capabilities in the skill's SKILL.md if non-obvious
+- Use the compatibility matrix to recommend optimal models
+- Consider fallback options for cost-sensitive use cases
+
 ### Progressive Disclosure Design Principle
 
 Skills use a three-level loading system to manage context efficiently:
