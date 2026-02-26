@@ -1,6 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/minimax-m2.5-free",
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "experimental-*": "ask"
+    }
+  },
   "agent": {
     "rnd": {
       "description": "Research and Development specialist for exploring new technologies and prototyping",

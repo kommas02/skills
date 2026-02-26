@@ -129,3 +129,9 @@ This documentation was created as part of Issue #6: "Add .opencode configuration
 - [x] Create agent definitions for each specialist
 - [x] Verify opencode can run locally
 - [x] PR #18 verified and up to date with default branch
+
+## Improvements Log
+
+### 2026-02-26
+- Synced root `opencode.json` with `.opencode/opencode.json` to include permission section
+- Fixed typo in `.github/workflows/main.yml`: "compleks" → "complex"
