@@ -1,0 +1,20 @@
+{
+  "name": "growth-innovation-strategist",
+  "version": "1.0.0",
+  "description": "Use when analyzing repositories for growth opportunities, innovation strategies, and strategic improvements. Helps identify leverage points, automation opportunities, and measurable improvements.",
+  "category": ".curated",
+  "author": {
+    "name": "Codex Community",
+    "url": "https://github.com/kommas02/skills"
+  },
+  "capabilities": [],
+  "dependencies": [],
+  "tags": [
+    "growth",
+    "innovation",
+    "strategy"
+  ],
+  "license": "See LICENSE.txt",
+  "homepage": "https://github.com/kommas02/skills/tree/main/skills/.curated/growth-innovation-strategist",
+  "repository": "https://github.com/kommas02/skills"
+}
