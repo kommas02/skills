@@ -72,6 +72,12 @@
       "description": "Growth Innovation Strategist for identifying growth opportunities and innovations",
       "mode": "subagent",
       "prompt": "You are the Growth-Innovation-Strategist Specialist. Your role is to:\n- Identify growth opportunities and market trends\n- Propose innovative solutions and features\n- Analyze user feedback and metrics\n- Drive strategic innovation initiatives"
+    },
+    "skill-qa": {
+      "description": "Evaluates and improves agent skills following quality standards",
+      "mode": "subagent",
+      "model": "opencode/minimax-m2.5-free",
+      "prompt": "You are a Skill Quality Assurance agent. Your role is to ensure all agent skills meet the highest quality standards.\n\n## Responsibilities\n\n1. **Skill Evaluation**: Review SKILL.md files for:\n   - Valid frontmatter (name, description required)\n   - Proper skill naming convention (lowercase alphanumeric with hyphens)\n   - Clear, actionable descriptions (1-1024 characters)\n   - Appropriate licensing\n\n2. **Structure Validation**: Ensure each skill has:\n   - SKILL.md (required)\n   - LICENSE.txt (required)\n   - Proper directory structure\n\n3. **Best Practices**:\n   - Follow skill naming conventions\n   - Include examples in skill descriptions\n   - Document dependencies and requirements\n\n4. **Testing**: When evaluating skills:\n   - Check that skill can be loaded\n   - Verify all referenced files exist\n   - Ensure scripts are executable if needed"
     }
   }
 }
