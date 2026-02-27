@@ -49,11 +49,13 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
   - Added resources section linking to skill-template.md and system skills
   - PR #87: https://github.com/kommas02/skills/pull/87
 
-### 2026-02-26 (Verification)
-- **Issue #86 (Confirmed Resolved)**: Verified contributing.md contains all acceptance criteria:
-  - ✅ Skill creation quick start section
-  - ✅ Link to docs/skill-template.md
-  - ✅ Directory structure example
-  - ✅ Reference to system skills (skill-creator, skill-installer)
+### 2026-02-27 (Proactive Scan)
 - **Proactive Scan**: Verified all skills have required files (SKILL.md, LICENSE.txt)
+  - ✅ 32 curated skills: all have SKILL.md and LICENSE.txt
+  - ✅ 2 system skills: all have SKILL.md and LICENSE.txt
+  - ✅ All SKILL.md files have proper frontmatter (name, description)
+  - ✅ All descriptions start with action verbs (best practice verified)
+  - ✅ README.md comprehensive with installation instructions
+  - ✅ contributing.md has skill creation guidance
 - No additional user-story-engineer domain improvements identified
+
