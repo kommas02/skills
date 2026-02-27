@@ -2,6 +2,15 @@
 
 ## Completed Work
 
+### 2026-02-27
+**Issue**: `doc-test` skill exists but missing from AGENTS.md project structure
+
+**Solution**: Added `doc-test/` to the project structure diagram in AGENTS.md
+
+**Impact**: Documentation now accurately represents all 32 curated skills, improving navigation clarity
+
+---
+
 ### 2026-02-26
 **Issue**: AGENTS.md project structure only listed 17 curated skills, but 31 exist
 
