@@ -70,6 +70,13 @@ Or using Homebrew on macOS and Linux:
 brew install anomalyco/tap/opencode
 ```
 
+Or using Arch Linux:
+
+```bash
+sudo pacman -S opencode
+paru -S opencode-bin
+```
+
 ### Verify Installation
 
 ```bash
@@ -91,7 +98,7 @@ opencode
 /init
 ```
 
-This will analyze your project and create an `AGENTS.md` file.
+This will analyze your project and create an `AGENTS.md` file in the project root.
 
 ## oh-my-opencode (Advanced)
 
@@ -109,12 +116,12 @@ This plugin provides:
 - Model optimization per agent type
 - Authentication management
 
-See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for details.
-
 ### Provider Priority
 
 When using oh-my-opencode, the provider priority is:
 **Native (anthropic/, openai/, google/) > GitHub Copilot > OpenCode Zen > Z.ai Coding Plan**
+
+See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for details.
 
 ## Configuration
 
