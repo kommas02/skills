@@ -15,9 +15,25 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │   ├── skills/            # Custom skill definitions
 │   └── readme.md          # OpenCode documentation
 ├── docs/                  # Documentation
-│   ├── evaluation-framework.md
-│   ├── quality-assurance.md
-│   └── ui-ux-engineer.md
+│   ├── blueprint.md              # Project blueprint
+│   ├── evaluation-framework.md    # Skill evaluation framework
+│   ├── quality-assurance.md       # QA guidelines
+│   ├── skill-schema.md           # Skill JSON schema
+│   ├── skill-template.md         # Skill template
+│   ├── skill-telemetry-schema.json # Telemetry schema
+│   ├── ui-ux-engineer.md         # UI/UX engineer memory
+│   ├── ai-agent-engineer.md      # AI agent engineer notes
+│   ├── backend-engineer.md       # Backend engineer notes
+│   ├── DX-engineer.md            # DX engineer notes
+│   ├── frontend-engineer.md      # Frontend engineer notes
+│   ├── platform-engineer.md      # Platform engineer notes
+│   ├── security-engineer.md      # Security engineer notes
+│   ├── technical-writer.md       # Technical writer notes
+│   ├── user-story-engineer.md    # User story engineer notes
+│   ├── Product-Architect.md      # Product architect notes
+│   ├── Product-Architect-notes.md # Product architect detailed notes
+│   ├── Growth-Innovation-Strategist.md # Growth strategy notes
+│   └── RnD.md                    # Research & Development notes
 ├── scripts/               # Utility scripts
 │   └── evaluate_skill.py
 ├── skills/                 # Agent skills
