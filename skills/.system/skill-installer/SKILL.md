@@ -61,3 +61,37 @@ All of these scripts use network, so when running in the sandbox, request escala
 ## Model Compatibility
 
 This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.
+
+## Troubleshooting
+
+### "Skill already installed" error
+
+**Symptoms:** Installation aborts because directory exists.
+
+**Solution:** Delete the existing skill first:
+```bash
+rm -rf $CODEX_HOME/skills/<skill-name>
+```
+Then reinstall.
+
+### Network errors during installation
+
+**Symptoms:** "Connection failed" or "Could not fetch" errors.
+
+**Solution:** Request sandbox escalation for network access:
+```
+sandbox_permissions=require_escalated
+```
+Or set a `GITHUB_TOKEN` environment variable for private repos.
+
+### Authentication errors for private repos
+
+**Symptoms:** "403 Forbidden" or "Authentication required".
+
+**Solution:** Ensure you have access to the repository. Set `GITHUB_TOKEN` or `GH_TOKEN` environment variable with appropriate permissions.
+
+### Skills list is empty or stale
+
+**Symptoms:** list-skills.py returns no results or outdated list.
+
+**Solution:** The list is fetched from GitHub API. Check your network connection. For cached results, the list updates periodically.

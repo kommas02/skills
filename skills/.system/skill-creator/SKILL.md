@@ -387,3 +387,35 @@ After testing the skill, users may request improvements. Often this happens righ
 2. Notice struggles or inefficiencies
 3. Identify how SKILL.md or bundled resources should be updated
 4. Implement changes and test again
+
+## Troubleshooting
+
+### init_skill.py fails with "Permission denied"
+
+**Symptoms:** Script cannot create directories or write files.
+
+**Solution:** Ensure you have write permissions to the target directory. Run with appropriate permissions or choose a different output path.
+
+### SKILL.md validation fails on frontmatter
+
+**Symptoms:** "Invalid YAML" or "Missing required field" errors.
+
+**Solution:** Verify frontmatter uses proper YAML format:
+- Use `name:` and `description:` (not `name =`)
+- Ensure description is on a single line
+- Check for special characters that may need quoting
+
+### openai.yaml generation fails
+
+**Symptoms:** Error running generate_openai_yaml.py.
+
+**Solution:** Ensure you pass valid key=value pairs:
+```bash
+scripts/generate_openai_yaml.py <path> --interface display_name="My Skill" --interface short_description="What it does"
+```
+
+### Skill triggers incorrectly or not at all
+
+**Symptoms:** Skill doesn't appear in suggestions or triggers for wrong requests.
+
+**Solution:** Review the `description` field in frontmatter - it should clearly state when the skill should be used. Include specific use cases and triggers in the description, not in the body.
