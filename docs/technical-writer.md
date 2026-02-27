@@ -63,3 +63,9 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - **Issue #52**: Fixed misleading heading in docs/technical-writer.md
 - **Action**: Closed both issues as resolved - files actually exist
 - **Impact**: Domain docs now have accurate information
+
+### PR #137: Fix incorrect claim about auto-generated skill index (2026-02-27)
+- **Issue**: `.opencode/README.md` claimed the skill index is auto-updated via GitHub Actions
+- **Analysis**: No such automation exists - verified by checking all workflow files
+- **Fix**: Updated `.opencode/README.md` to accurately describe manual regeneration process
+- **Impact**: Documentation now correctly reflects that `python scripts/generate_skill_index.py` must be run manually
