@@ -72,12 +72,23 @@ The Product-Architect domain focuses on:
 - **Issue #95 verification**: growth-innovation-strategist already has agents/ directory - appears resolved
 - **doc-test skill**: Found missing agents/ directory - added openai.yaml for consistency
 
+### AGENTS.md Documentation Fix (2026-02-27)
+**Status**: Implemented
+
+**Changes**:
+1. Updated `AGENTS.md:67-77` - Added skill.json to skill structure documentation
+2. Added `agents/openai.yaml` to skill structure diagram
+3. Improved comments to clarify "frontmatter" and "license file"
+
+**Impact**: Documentation consistency - AGENTS.md now matches Product-Architect.md requirements
+
 ### Related Issues
 - #20: Create skill metadata schema (COMPLETED)
 - #21: Add skill evaluation framework (QA domain)
 - #30: Add skill quality telemetry (Growth-Innovation-Strategist domain)
 - #52: Create .experimental folder (COMPLETED)
 - #96: Fix broken reference in quality-assurance.md (COMPLETED)
+- #95: growth-innovation-strategist agents/ directory (VERIFIED - resolved)
 
 ## Standards
 

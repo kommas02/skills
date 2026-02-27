@@ -67,9 +67,11 @@ Each skill follows this structure:
 
 ```
 skill-name/
-├── SKILL.md           # Skill definition (required)
-├── LICENSE.txt        # License (required)
+├── SKILL.md           # Skill definition with frontmatter (required)
+├── skill.json         # Metadata for discovery and versioning (required)
+├── LICENSE.txt        # License file (required)
 ├── agents/            # Agent-specific instructions
+│   └── openai.yaml    # Codex agent configuration
 ├── assets/            # Static assets
 └── scripts/           # Helper scripts
 ```
