@@ -62,6 +62,15 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
   - jupyter-notebook (function calling)
 - Total: 13 skills now document model requirements
 
+### Skill Short-Description Expansion
+- Added short-description metadata to 5 more high-value skills:
+  - cloudflare-deploy: "Deploy serverless apps to Cloudflare Workers and Pages"
+  - netlify-deploy: "Deploy web projects to Netlify with preview URLs"
+  - gh-fix-ci: "Debug and fix failing GitHub Actions PR checks"
+  - imagegen: "Generate and edit images using OpenAI Image API"
+  - jupyter-notebook: "Create and edit Jupyter notebooks for analysis and tutorials"
+- Total skills with short-description: 16 (up from 11)
+
 ## Insights & Patterns
 - Repository benefits from dedicated growth/innovation skill
 - Skills repository can serve as foundation for agent-specialist workflows
