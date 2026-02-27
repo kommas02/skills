@@ -7,6 +7,7 @@ This template defines the required, recommended, and optional sections for OpenA
 ```
 skill-name/
 ├── SKILL.md           # REQUIRED - Main skill definition
+├── skill.json         # REQUIRED - Metadata for discovery and versioning
 ├── LICENSE.txt        # REQUIRED - License file
 ├── agents/            # RECOMMENDED - Agent-specific instructions
 ├── assets/            # OPTIONAL - Static assets
