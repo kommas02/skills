@@ -82,6 +82,16 @@ The Product-Architect domain focuses on:
 
 **Impact**: Documentation consistency - AGENTS.md now matches Product-Architect.md requirements
 
+### Skills Index Fix (2026-02-27)
+**Status**: Implemented (PR #136)
+
+**Changes**:
+1. Regenerated `skills/index.json` using `scripts/generate_skill_index.py`
+2. Fixed `total_skills` count from 33 to 34
+3. Added missing `doc-test` skill to the index
+
+**Impact**: Skills index now correctly reflects all 34 skills
+
 ### Related Issues
 - #20: Create skill metadata schema (COMPLETED)
 - #21: Add skill evaluation framework (QA domain)
@@ -89,6 +99,7 @@ The Product-Architect domain focuses on:
 - #52: Create .experimental folder (COMPLETED)
 - #96: Fix broken reference in quality-assurance.md (COMPLETED)
 - #95: growth-innovation-strategist agents/ directory (VERIFIED - resolved)
+- #136: Skills index fix (COMPLETED)
 
 ## Standards
 
