@@ -57,5 +57,9 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
   - ✅ All descriptions start with action verbs (best practice verified)
   - ✅ README.md comprehensive with installation instructions
   - ✅ contributing.md has skill creation guidance
-- No additional user-story-engineer domain improvements identified
+- **Documentation Fix**: Found and documented missing `scripts/evaluate_skill.py` references
+  - Issue #96 and #52 verified as resolved (files/folders now exist)
+  - Found `evaluate_skill.py` referenced in docs but not implemented (part of QA issue #21)
+  - Added notes in docs/evaluation-framework.md and docs/quality-assurance.md indicating the script is planned
+  - This prevents user confusion while QA implements the evaluation runner
 

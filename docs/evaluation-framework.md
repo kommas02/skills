@@ -103,17 +103,13 @@ List each step the skill should take in order:
 
 ## Running Evaluations
 
-### Local Testing
+> **Note**: The evaluation runner script (`scripts/evaluate_skill.py`) is planned as part of issue #21 and is not yet implemented. For now, evaluations can be run manually using the case JSON files in each skill's `evaluations/` directory.
+
+### Local Testing (Manual)
 
 ```bash
-# Evaluate a specific skill
-python scripts/evaluate_skill.py skills/.curated/my-skill
-
-# Evaluate all skills
-python scripts/evaluate_skill.py --all
-
-# Evaluate with specific model
-python scripts/evaluate_skill.py skills/.curated/my-skill --model opus
+# Manually run evaluation cases by reading the case JSON files
+# and executing them against the skill
 ```
 
 ### CI Validation

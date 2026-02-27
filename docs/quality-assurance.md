@@ -135,7 +135,7 @@ See [evaluation-framework.md](evaluation-framework.md) for the complete evaluati
 - **Purpose**: Test skill quality, accuracy, and effectiveness
 - **Location**: Each skill's `evaluations/` directory
 - **Minimum Required**: 2 evaluation cases per skill
-- **Runner**: `scripts/evaluate_skill.py`
+- **Runner**: `scripts/evaluate_skill.py` (planned - see issue #21)
 
 ### Adding Evaluations
 
@@ -147,10 +147,8 @@ mkdir -p skills/my-skill/evaluations
 
 ### Running Evaluations
 
-```bash
-# Evaluate specific skill
-python scripts/evaluate_skill.py skills/skill-name
+> **Note**: The `evaluate_skill.py` script is planned as part of issue #21 and is not yet available. Manual evaluation using case JSON files is currently required.
 
-# Evaluate all skills
-python scripts/evaluate_skill.py --all
+```bash
+# Evaluation runner coming soon (issue #21)
 ```
