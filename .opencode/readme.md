@@ -102,9 +102,9 @@ This will analyze your project and create an `AGENTS.md` file in the project roo
 
 ## oh-my-opencode (Advanced)
 
-For enhanced AI agent capabilities with multi-provider support, consider installing [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode):
+For enhanced AI agent capabilities with multi-provider support, consider installing [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode).
 
-### For LLM Agents
+### Installation
 
 ```bash
 bunx oh-my-opencode install
@@ -131,7 +131,7 @@ When using oh-my-opencode, the provider priority is:
 | GitHub Copilot | claude-opus-4.5 (via Copilot), gpt-5.2 (via Copilot) |
 | OpenCode Zen | claude-opus-4-5, gpt-5.2, gpt-5-nano, big-pickle |
 
-See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for detailed setup instructions.
+See the [oh-my-opencode installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for detailed setup instructions.
 
 ## Configuration
 
@@ -231,6 +231,25 @@ SKILL.md must include frontmatter with:
         ├── SKILL.md
         └── LICENSE.txt
 ```
+
+## Available Agents
+
+This repository defines the following custom agents:
+
+- **rnd** - Research and Development specialist for exploring new technologies and prototyping
+- **product-architect** - Product Architect for designing system architecture and product strategy
+- **ai-agent-engineer** - AI Agent Engineer for improving agent orchestration and automation workflows
+- **backend-engineer** - Backend Engineer for server-side development and API design
+- **frontend-engineer** - Frontend Engineer for user interface development
+- **ui-ux-engineer** - UI/UX Engineer for user experience and interface design
+- **platform-engineer** - Platform Engineer for infrastructure and DevOps
+- **security-engineer** - Security Engineer for security audits and vulnerability management
+- **quality-assurance** - Quality Assurance specialist for testing and quality control
+- **dx-engineer** - Developer Experience Engineer for improving developer tooling and workflows
+- **technical-writer** - Technical Writer for documentation and knowledge management
+- **user-story-engineer** - User Story Engineer for requirements and acceptance criteria
+- **growth-innovation-strategist** - Growth Innovation Strategist for identifying growth opportunities and innovations
+- **skill-qa** - Evaluates and improves agent skills following quality standards
 
 ## GitHub Workflow
 
