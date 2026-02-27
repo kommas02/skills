@@ -69,3 +69,15 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - **Analysis**: No such automation exists - verified by checking all workflow files
 - **Fix**: Updated `.opencode/README.md` to accurately describe manual regeneration process
 - **Impact**: Documentation now correctly reflects that `python scripts/generate_skill_index.py` must be run manually
+
+### PR #154: Add skill.json to required files in documentation (2026-02-27)
+- **Issue #153**: Documentation inconsistency - skill.json is required per AGENTS.md but missing from contributing.md and skill-template.md
+- **Analysis**: Proactive scan found skill.json listed as required in AGENTS.md but absent from contributing.md (line 31-36) and docs/skill-template.md (directory structure)
+- **Fix**: Added skill.json to both documentation files with "REQUIRED" label
+- **Impact**: Documentation now consistent - skill creators will know skill.json is required
+
+## Proactive Scan Results (2026-02-27)
+- Verified all 34 skills have SKILL.md, skill.json, and LICENSE.txt
+- Verified all skill.json files pass JSON validation
+- Verified all docs/*.md files listed in AGENTS.md exist
+- Verified .experimental/ directory exists with README.md
