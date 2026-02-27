@@ -125,7 +125,9 @@ Required fields:
 - Successfully created validate-skills.yml workflow
 
 ### What Didn't Work
-- GitHub App token lacks "workflows" permission - cannot push workflow files directly (WORKAROUND: used API)
+- GitHub App token lacks "workflows" permission - cannot push workflow files directly
+- Workaround: Used GitHub API and PR comments to document the workflow content
+- PR #164 created with workflow file content in description for manual merge
 
 ### Teamwork Notes
 - Coordination with DX-engineer needed for workflow automation
