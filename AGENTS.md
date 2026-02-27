@@ -15,6 +15,7 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │   ├── skills/            # Custom skill definitions
 │   └── readme.md          # OpenCode documentation
 ├── docs/                  # Documentation
+│   ├── evaluation-framework.md
 │   ├── quality-assurance.md
 │   └── ui-ux-engineer.md
 ├── scripts/               # Utility scripts
