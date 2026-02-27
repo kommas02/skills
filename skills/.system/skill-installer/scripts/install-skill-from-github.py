@@ -245,6 +245,18 @@ def _validate_skill(path: str) -> None:
     skill_md = os.path.join(path, "SKILL.md")
     if not os.path.isfile(skill_md):
         raise InstallError("SKILL.md not found in selected skill directory.")
+    skill_json_path = os.path.join(path, "skill.json")
+    if not os.path.isfile(skill_json_path):
+        raise InstallError("skill.json not found in selected skill directory.")
+    try:
+        with open(skill_json_path, "r") as f:
+            data = json.load(f)
+        required_fields = ["name", "version", "description", "category"]
+        missing = [field for field in required_fields if field not in data]
+        if missing:
+            raise InstallError(f"skill.json missing required fields: {', '.join(missing)}")
+    except json.JSONDecodeError as e:
+        raise InstallError(f"skill.json is not valid JSON: {e}")
 
 
 def _copy_skill(src: str, dest_dir: str) -> None:
