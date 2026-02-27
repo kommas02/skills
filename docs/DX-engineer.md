@@ -37,7 +37,7 @@ INIT → PLAN → IMPLEMENT → VERIFY → SELF-REFLECTION → DELIVER (PR)
 ## Known Limitations
 - **GitHub App Workflow Permission**: The github-actions[bot] lacks permission to push workflow file changes (`.github/workflows/*`). This is a GitHub security restriction.
 - **Workaround**: Either use a PAT with workflow permissions, or have a human user push the changes.
-- **Issue Comment**: https://github.com/kommas02/skills/issues/17#issuecomment-3971566031
+- **Issue Comment**: https://github.com/kommas02/skills/issues/17#issuecomment-3972760646
 
 ## Best Practices
 - Never refactor unrelated modules
