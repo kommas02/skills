@@ -134,6 +134,7 @@ This documentation was created as part of Issue #6: "Add .opencode configuration
 
 ### 2026-02-27
 - Documented Issue #17: CI workflow triggers on wrong branch (`main` instead of `opencode`)
+- Created PR #150: Added `skill-qa` agent to root `opencode.json` to match `.opencode/opencode.json` (Issue #147)
 
 ### 2026-02-26
 - Synced root `opencode.json` with `.opencode/opencode.json` to include permission section (PR #90)
