@@ -38,6 +38,49 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
 - Product-Architect: System architecture and skill schema
 - Quality-Assurance: Evaluation frameworks and testing
 
+## User Story Templates
+
+### Issue Template
+
+Use this format when creating issues:
+
+```markdown
+**Problem Statement:** [What is the issue? Why does it matter?]
+
+**Root Cause:** [What's causing the problem?]
+
+**Proposed Solution:** [How should it be fixed?]
+
+**Acceptance Criteria:**
+- [ ] Criterion 1 (measurable)
+- [ ] Criterion 2 (measurable)
+
+**Definition of Done:**
+- [ ] Code updated
+- [ ] Tests added/updated
+- [ ] Documentation updated
+
+**Impact Surface:** [Architecture | Security | Performance | UX | DevEx]
+**Priority:** [High | Medium | Low]
+**Owner Agent:** [Domain name]
+```
+
+### Acceptance Criteria Best Practices
+
+- **Specific:** Clearly describe what should happen
+- **Measurable:** Include quantifiable metrics where possible
+- **Testable:** Can be verified through manual or automated testing
+- **Independent:** Each criterion can be evaluated separately
+- **Realistic:** Achievable with available resources
+
+### Example: Good vs Bad Acceptance Criteria
+
+| Bad | Good |
+|-----|------|
+| "Improve documentation" | "Add Troubleshooting section to all skills missing it" |
+| "Fix bugs" | "Resolve #95: Add agents/ directory to growth-innovation-strategist skill" |
+| "Make it faster" | "Reduce CI build time by 30% (measured via GitHub Actions logs)" |
+
 ---
 
 ## Recent Work
@@ -62,4 +105,11 @@ The User-Story-Engineer domain focuses on documentation clarity, user story qual
   - Found `evaluate_skill.py` referenced in docs but not implemented (part of QA issue #21)
   - Added notes in docs/evaluation-framework.md and docs/quality-assurance.md indicating the script is planned
   - This prevents user confusion while QA implements the evaluation runner
+
+### 2026-02-27 (Proactive Improvement)
+- **Documentation Enhancement**: Added User Story Templates section to docs/user-story-engineer.md
+  - Added issue template with Problem Statement, Root Cause, Proposed Solution, Acceptance Criteria
+  - Added Acceptance Criteria Best Practices (Specific, Measurable, Testable, Independent, Realistic)
+  - Added Good vs Bad Acceptance Criteria examples table
+  - This helps contributors create better issues with measurable criteria
 
