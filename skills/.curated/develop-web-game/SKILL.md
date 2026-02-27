@@ -147,3 +147,7 @@ At the end of your work, leave TODOs and suggestions for the next agent in `prog
 ## References
 
 - `$WEB_GAME_ACTIONS` (installed default: `$CODEX_HOME/skills/develop-web-game/references/action_payloads.json`) — example action payloads (keyboard + mouse, per-frame capture). Use these to build your burst.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

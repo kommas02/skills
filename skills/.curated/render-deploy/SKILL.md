@@ -477,3 +477,7 @@ The deploy needs escalated network access to deploy to Render. I can rerun the c
 
 Optional: If you need deeper diagnostics (metrics/DB checks/error catalog), suggest installing the
 `render-debug` skill. It is not required for the core deploy flow.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

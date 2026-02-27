@@ -26,3 +26,7 @@ description: "Use only when the user explicitly asks to stage, commit, push, and
 - Open a PR and edit title/body to reflect the description and the deltas: `GH_PROMPT_DISABLED=1 GIT_TERMINAL_PROMPT=0 gh pr create --draft --fill --head $(git branch --show-current)`
 - Write the PR description to a temp file with real newlines (e.g. pr-body.md ... EOF) and run pr-body.md to avoid \\n-escaped markdown.
 - PR description (markdown) must be detailed prose covering the issue, the cause and effect on users, the root cause, the fix, and any tests or checks used to validate.
+
+## Model Compatibility
+
+This skill works with any model. Use `gpt-4o`, `o3-mini`, or `gpt-4o-mini` based on your needs. See `skill-model-compatibility.json` for full details.

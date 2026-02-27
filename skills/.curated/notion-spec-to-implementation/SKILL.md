@@ -56,3 +56,7 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `references/` — parsing patterns, plan/task templates, progress cadence (e.g., `spec-parsing.md`, `standard-implementation-plan.md`, `task-creation.md`, `progress-tracking.md`).
 - `examples/` — end-to-end walkthroughs (e.g., `ui-component.md`, `api-feature.md`, `database-migration.md`).
+
+## Model Compatibility
+
+This skill benefits from **reasoning** and **large context** capabilities. Use `o1`, `gpt-4o`, or `gpt-4-turbo` for optimal results. See `skill-model-compatibility.json` for full details.

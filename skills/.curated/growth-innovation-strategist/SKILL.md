@@ -67,3 +67,7 @@ For each identified opportunity, provide:
 - Prefer small, atomic changes over large rewrites
 - Always measure before and after
 - Ensure backward compatibility
+
+## Model Compatibility
+
+This skill benefits from **reasoning** and **large context** capabilities. Use `o1`, `gpt-4o`, or `gpt-4-turbo` for optimal results. See `skill-model-compatibility.json` for full details.

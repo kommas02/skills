@@ -79,3 +79,7 @@ Deliver an actionable AppSec-grade threat model that is specific to the reposito
 - Optional controls/asset list: `references/security-controls-and-assets.md`
 
 Only load the reference files you need. Keep the final result concise, grounded, and reviewable.
+
+## Model Compatibility
+
+This skill benefits from **reasoning** and **vision** capabilities. Use `o1` or `gpt-4o` for optimal results. See `skill-model-compatibility.json` for full details.

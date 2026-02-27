@@ -79,3 +79,7 @@ python3 "$TRANSCRIBE_CLI" \
 
 ## Reference map
 - `references/api.md`: supported formats, limits, response formats, and known-speaker notes.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

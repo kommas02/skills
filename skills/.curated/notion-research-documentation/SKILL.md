@@ -57,3 +57,7 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `references/` — search tactics, format selection, templates, and citation rules (e.g., `advanced-search.md`, `format-selection-guide.md`, `research-summary-template.md`, `comparison-template.md`, `citations.md`).
 - `examples/` — end-to-end walkthroughs (e.g., `competitor-analysis.md`, `technical-investigation.md`, `market-research.md`, `trip-planning.md`).
+
+## Model Compatibility
+
+This skill works with any model that supports function calling and benefits from large context. Use `gpt-4o` or `gpt-4-turbo` for optimal results. See `skill-model-compatibility.json` for full details.
