@@ -119,3 +119,12 @@ All skills must include:
 ### CI Validation
 - Validation script (`scripts/validate-skill-json.js`) uses JSON Schema draft-07
 - Run validation: `node scripts/validate-skill-json.js`
+
+### Blueprint Documentation Fix (2026-02-27)
+**Status**: Implemented
+
+**Changes**:
+1. Added missing `doc-test` skill to curated skills table in `docs/blueprint.md`
+2. Added missing `growth-innovation-strategist` skill to curated skills table in `docs/blueprint.md`
+
+**Impact**: Documentation consistency - blueprint.md now lists all 32 curated skills
