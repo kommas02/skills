@@ -47,7 +47,7 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - **Fix**: Added `evaluation-framework.md` to the docs/ section in AGENTS.md project structure
 - **Impact**: Documentation consistency - docs/ directory now accurately represented
 
-### Issue #52: .experimental folder referenced but doesn't exist
+### Issue #52: .experimental folder reference
 - **Status**: RESOLVED (previously by Product-Architect)
 - **Analysis**: The `skills/.experimental/` directory now exists with README.md
 - **Verification**: Directory confirmed present at `skills/.experimental/`
