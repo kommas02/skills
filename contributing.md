@@ -20,7 +20,7 @@ This section guides you through creating a new skill for the OpenAI Skills repos
 
 1. **Use the skill-creator skill** - Run `/skill-creator` in Codex for step-by-step guidance
 2. **Follow the template** - See [docs/skill-template.md](./docs/skill-template.md) for required sections
-3. **Create your skill directory** - Place it in `skills/.curated/` or `skills/.system/`
+3. **Create your skill directory** - Place it in `skills/.curated/`, `skills/.system/`, or `skills/.experimental/`
 
 ### Required Files
 

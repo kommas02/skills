@@ -3,6 +3,21 @@
 ## Completed Work
 
 ### 2026-02-27
+**Issue**: README.md and contributing.md missing `.experimental/` directory reference (AGENTS.md has it)
+
+**Solution**: Updated both files to be consistent with AGENTS.md:
+1. **README.md**: Added curated and experimental skill categories with descriptions
+2. **contributing.md**: Added `skills/.experimental/` as placement option
+
+**Files updated**:
+- README.md - Added links to `.curated/` and `.experimental/` directories
+- contributing.md - Added `.experimental/` to skill directory placement options
+
+**Impact**: Documentation consistency improved - all 3 main docs now reference the 3 skill categories (.system, .curated, .experimental) uniformly
+
+---
+
+### 2026-02-27
 **Issue**: `skills/.experimental/` directory exists with README but not documented in AGENTS.md
 
 **Solution**: Updated AGENTS.md to:
