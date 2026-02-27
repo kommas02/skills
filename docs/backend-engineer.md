@@ -7,7 +7,7 @@
 ### 1. Workflow Trigger Branch Mismatch
 - **File**: `.github/workflows/main.yml`
 - **Issue**: Workflow triggered on `main` branch but default branch is `opencode`
-- **Status**: ✅ FIXED (2026-02-27) - PR pending
+- **Status**: ✅ READY - Manual application required
 - **Fix**: Changed line 6 from `- main` to `- opencode`
 - **Impact**: Workflows will now properly trigger on default branch pushes
 
@@ -26,8 +26,8 @@
 ### 4. Duplicate API_KEY Environment Variable
 - **File**: `.github/workflows/main.yml`
 - **Issue**: Redundant `API_KEY` env var mapping to same secret as `GEMINI_API_KEY`
-- **Status**: ✅ FIXED (2026-02-27) - PR pending
-- **Fix**: Removed 4 occurrences of `API_KEY: ${{ secrets.GEMINI_API_KEY }}` from all jobs (architect, specialists, Fixer, PR-Merger)
+- **Status**: ✅ READY - Manual application required
+- **Fix**: Remove 4 occurrences of `API_KEY: ${{ secrets.GEMINI_API_KEY }}` from all jobs
 - **Impact**: Removes security confusion from redundant secret mapping
 
 ## Key Observations
@@ -40,11 +40,65 @@
 
 ## Action Items
 
-- [x] **Workflow trigger fix**: PR #107
-- [x] **Duplicate API_KEY fix**: PR #107
+- [x] **Workflow trigger fix**: Ready for manual application
+- [x] **Duplicate API_KEY fix**: Ready for manual application
 - [ ] Consider creating a centralized config for default branch name
 - [ ] Audit other scripts that may reference "main" branch
 - [ ] Add validation to check branch consistency in CI
+
+## Pending Fix Ready for Manual Application
+
+Both workflow fixes are ready but blocked by GitHub App permission restriction.
+
+### Exact Diff
+```diff
+--- a/.github/workflows/main.yml
++++ b/.github/workflows/main.yml
+@@ -3,7 +3,7 @@ name: parallel
+ on:
+   push:
+     branches:
+-      - main
++      - opencode
+   schedule:
+     - cron: "0 */4 * * *"
+   workflow_dispatch:
+@@ -34,7 +34,6 @@ jobs:
+       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+-      API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+     steps:
+       - uses: actions/checkout@v4
+@@ -269,7 +268,6 @@ jobs:
+           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+-          API_KEY: ${{ secrets.GEMINI_API_KEY }}
+         run: |
+           echo "🚀 Specialist ${{ matrix.role }} executing"
+@@ -345,7 +343,6 @@ jobs:
+           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+-          API_KEY: ${{ secrets.GEMINI_API_KEY }}
+         run: |
+           opencode run /ulw-loop "
+@@ -411,7 +408,6 @@ jobs:
+           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+-          API_KEY: ${{ secrets.GEMINI_API_KEY }}
+         run: |
+           opencode run /ulw-loop "
+```
+
+## Solution Options
+
+1. **Manual Application**: Apply the diff above manually (repo owner)
+2. **Add Workflow Permission**: Grant `workflows` permission to the GitHub App
+3. **Use Personal Token**: Use a personal access token with proper permissions
 
 ## Permission Notes
 
@@ -52,10 +106,9 @@ GitHub App tokens (like those used by CI) require explicit `workflows` permissio
 
 ## Attempted Fixes
 
+- **2026-02-27**: Both fixes applied locally, YAML validated. Push rejected due to GitHub App permission restriction.
 - **2026-02-27**: Both fixes applied and PR created (#107)
-- **2026-02-27**: Applied both fixes (workflow trigger + duplicate API_KEY) locally. Changes verified (YAML valid). Push rejected due to GitHub App permission restriction.
 - **2026-02-26**: Attempted to apply fixes directly but push was rejected due to GitHub App permission restrictions on workflow files
-- The exact diffs are now provided above for manual application
 
 ## Last Updated
 
@@ -63,4 +116,4 @@ GitHub App tokens (like those used by CI) require explicit `workflows` permissio
 
 ## Linked PRs
 
-- PR #107: fix(backend-engineer): workflow trigger branch and duplicate API_KEY
+- PR #163: docs(backend-engineer): document workflow fixes pending manual application
