@@ -37,3 +37,23 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - Use `references/` (plural) for reference documentation directories
 - Use `LICENSE.txt` for license files (not NOTICE.txt)
 - README.md in root documents the license convention
+
+## 2026-02-27
+
+### Issue #96: AGENTS.md references non-existent evaluation-framework.md
+- **Status**: RESOLVED
+- **Analysis**: The file `docs/evaluation-framework.md` exists and is valid
+- **Issue**: The file was not listed in AGENTS.md project structure (lines 17-19)
+- **Fix**: Added `evaluation-framework.md` to the docs/ section in AGENTS.md project structure
+- **Impact**: Documentation consistency - docs/ directory now accurately represented
+
+### Issue #52: .experimental folder referenced but doesn't exist
+- **Status**: RESOLVED (previously by Product-Architect)
+- **Analysis**: The `skills/.experimental/` directory now exists with README.md
+- **Verification**: Directory confirmed present at `skills/.experimental/`
+
+### Proactive Scan Results
+- Verified all docs/*.md references are valid
+- Confirmed skill-template.md exists and is properly linked
+- Verified issue templates exist (.github/ISSUE_TEMPLATE/)
+- All internal markdown links in docs/ directory are valid
