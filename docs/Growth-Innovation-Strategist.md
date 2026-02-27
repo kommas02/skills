@@ -84,3 +84,13 @@ Focus: Small, safe, measurable improvements for repository growth, innovation, a
 - Privacy principles: hashed user IDs, opt-in only, 90-day retention, no PII
 - Created .github/ISSUE_TEMPLATE/skill-feedback.md for structured feedback collection
 - Updated docs/blueprint.md with telemetry documentation
+
+### Skill Metadata Short-Description Standardization
+- Added short-description metadata to 5 high-value curated skills:
+  - vercel-deploy: "Deploy web apps to Vercel with preview URLs"
+  - playwright: "Automate real browsers for testing and scraping"
+  - pdf: "Read, create, and review PDF files with visual checks"
+  - figma: "Fetch design context and assets from Figma via MCP"
+  - screenshot: "Capture desktop screenshots (full screen, window, or region)"
+- Total skills with short-description: 12 (up from 6)
+- Improves skill discoverability in AI agent tooling
