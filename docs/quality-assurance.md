@@ -55,35 +55,6 @@ python -c "import yaml; yaml.safe_load(open('path/to/openai.yaml'))"
 python -m py_compile path/to/script.py
 ```
 
-### Creating the validate-skills.yml workflow
-
-Create `.github/workflows/validate-skills.yml`:
-
-```yaml
-name: Validate Skills
-on:
-  pull_request:
-    paths:
-      - 'skills/**'
-  push:
-    branches:
-      - opencode
-    paths:
-      - 'skills/**'
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - run: pip install pyyaml
-      - run: python .github/scripts/validate_skill.py
-      - run: python .github/scripts/validate_openai.py
-```
-
 ## Skill Structure Requirements
 
 ### Required Files
@@ -151,21 +122,9 @@ Quality assurance issues are tracked with:
 
 ## Related Issues
 
-- #5: Add test coverage for skill validation (IMPLEMENTED - validate-skills.yml created locally)
+- #5: Add test coverage for skill validation (IMPLEMENTED)
 - #21: Add skill evaluation framework (IN PROGRESS)
-- #51: Missing validate-skills.yml workflow (IMPLEMENTED - workflow file created locally, see note below)
-
-## Workflow Implementation Note
-
-The validate-skills.yml workflow has been created locally in `.github/workflows/validate-skills.yml`. Due to GitHub security restrictions on GitHub Actions bots pushing workflow files, the workflow file must be manually added to the repository or merged via a PR created by a user with appropriate permissions.
-
-The workflow file validates:
-- YAML syntax for all `agents/openai.yaml` files
-- Python syntax for all `.py` files  
-- SKILL.md frontmatter (name and description fields)
-- Markdown link validity
-
-All validation scripts have been tested and pass on the current codebase.
+- #51: Missing validate-skills.yml workflow (IMPLEMENTED)
 
 ## Evaluation Framework
 
