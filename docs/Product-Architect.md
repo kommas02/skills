@@ -34,15 +34,6 @@ The Product-Architect domain focuses on:
 - `homepage`: documentation URL
 - `repository`: source URL
 
-### PR #73: Fix Product-Arhitect Typo
-**Status**: In Review
-
-**Changes**:
-1. Renamed `docs/Product-Arhitect.md` to `docs/Product-Architect-notes.md`
-2. Fixed typo reference in `docs/user-story-engineer.md`
-
-**Impact**: Documentation consistency within Product-Architect domain
-
 ### Issue #52: Create .experimental folder
 **Status**: Completed
 
@@ -91,6 +82,15 @@ The Product-Architect domain focuses on:
 3. Added missing `doc-test` skill to the index
 
 **Impact**: Skills index now correctly reflects all 34 skills
+
+### Documentation Consolidation (2026-02-27)
+**Status**: Implemented
+
+**Changes**:
+1. Removed redundant `docs/Product-Architect-notes.md` (consolidated into Product-Architect.md)
+2. Updated `AGENTS.md:33-35` to remove reference to consolidated file
+
+**Impact**: Documentation reduced to single source of truth for Product-Architect domain
 
 ### Related Issues
 - #20: Create skill metadata schema (COMPLETED)
