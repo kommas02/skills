@@ -1,6 +1,21 @@
 # RnD Documentation
 
-## Session 2026-02-26 (continued)
+## Session 2026-02-27
+
+### Issue #36 - Skill Model Compatibility - COMPLETED
+- **Problem**: Skills lacked model compatibility guidance for optimal AI model selection
+- **Solution**: Added model compatibility info to all SKILL.md files
+- **Implementation**:
+  - Identified 19 skills missing model compatibility info in their SKILL.md
+  - Added "## Model Compatibility" sections with:
+    - Function calling skills: "Use `gpt-4o` or `o3-mini`"
+    - Vision skills: "Use `gpt-4o` or `gpt-4-turbo`"
+    - Reasoning skills: "Use `o1` or `gpt-4o`"
+    - Large context skills: "Use `o1`, `gpt-4o`, or `gpt-4-turbo`"
+    - No specific requirements: "Use any model based on your needs"
+  - All 33 skills now reference `skill-model-compatibility.json`
+- **Files Changed**: 19 SKILL.md files in skills/.curated/ and skills/.system/
+- **Result**: Issue #36 acceptance criteria completed
 
 ### Issue #97 - Skill Dependency Resolution System - COMPLETED
 - **Problem**: Skills operate independently with no mechanism to declare dependencies

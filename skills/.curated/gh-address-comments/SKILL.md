@@ -23,3 +23,7 @@ Prereq: ensure `gh` is authenticated (for example, run `gh auth login` once), th
 
 Notes:
 - If gh hits auth/rate issues mid-run, prompt the user to re-authenticate with `gh auth login`, then retry.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

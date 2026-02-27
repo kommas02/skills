@@ -151,3 +151,7 @@ Use these modules when the request is for a specific artifact. They provide targ
 - **`references/social-ads.md`**: templates for short social ad beats.
 - **`references/troubleshooting.md`**: common errors and fixes.
 - **`references/codex-network.md`**: network/approval troubleshooting.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

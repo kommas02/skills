@@ -142,3 +142,7 @@ Use these modules when the request is for a specific delivery style. They provid
 - **`references/ivr.md`**: templates + defaults for IVR/phone prompts.
 - **`references/accessibility.md`**: templates + defaults for accessibility reads.
 - **`references/codex-network.md`**: environment/sandbox/network-approval troubleshooting.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

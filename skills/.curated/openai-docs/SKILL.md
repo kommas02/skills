@@ -54,3 +54,7 @@ If MCP tools fail or no OpenAI docs resources are available:
 - Always use MCP doc tools before any web search for OpenAI-related questions.
 - If the MCP server is installed but returns no meaningful results, then use web search as a fallback.
 - When falling back to web search, restrict to official OpenAI domains (developers.openai.com, platform.openai.com) and cite sources.
+
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.

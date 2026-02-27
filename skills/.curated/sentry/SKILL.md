@@ -121,3 +121,7 @@ Always use these endpoints (GET only):
 
 Example prompt: “List the top 10 open issues for prod in the last 24h.”
 Expected: ordered list with titles, short IDs, counts, last seen.
+-e 
+## Model Compatibility
+
+This skill works with any model that supports function calling. Use `gpt-4o` or `o3-mini` for optimal results. See `skill-model-compatibility.json` for full details.
