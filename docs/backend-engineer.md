@@ -7,7 +7,7 @@
 ### 1. Workflow Trigger Branch Mismatch
 - **File**: `.github/workflows/main.yml`
 - **Issue**: Workflow triggered on `main` branch but default branch is `opencode`
-- **Status**: ✅ FIXED (2026-02-27) - changes applied locally but cannot push due to GitHub App permission restriction
+- **Status**: ✅ FIXED (2026-02-27) - PR pending
 - **Fix**: Changed line 6 from `- main` to `- opencode`
 - **Impact**: Workflows will now properly trigger on default branch pushes
 
@@ -26,8 +26,8 @@
 ### 4. Duplicate API_KEY Environment Variable
 - **File**: `.github/workflows/main.yml`
 - **Issue**: Redundant `API_KEY` env var mapping to same secret as `GEMINI_API_KEY`
-- **Status**: ✅ FIXED (2026-02-27) - changes applied locally but cannot push due to GitHub App permission restriction
-- **Fix**: Removed 4 occurrences of `API_KEY: ${{ secrets.GEMINI_API_KEY }}` from all jobs (architect, specialists, Fixer, PR-Handler)
+- **Status**: ✅ FIXED (2026-02-27) - PR pending
+- **Fix**: Removed 4 occurrences of `API_KEY: ${{ secrets.GEMINI_API_KEY }}` from all jobs (architect, specialists, Fixer, PR-Merger)
 - **Impact**: Removes security confusion from redundant secret mapping
 
 ## Key Observations
@@ -40,8 +40,8 @@
 
 ## Action Items
 
-- [x] **Workflow trigger fix**: Completed locally - change `main` to `opencode` on line 6 of main.yml
-- [x] **Duplicate API_KEY fix**: Completed locally - removed redundant API_KEY environment variable
+- [x] **Workflow trigger fix**: PR #107
+- [x] **Duplicate API_KEY fix**: PR #107
 - [ ] Consider creating a centralized config for default branch name
 - [ ] Audit other scripts that may reference "main" branch
 - [ ] Add validation to check branch consistency in CI
@@ -52,6 +52,7 @@ GitHub App tokens (like those used by CI) require explicit `workflows` permissio
 
 ## Attempted Fixes
 
+- **2026-02-27**: Both fixes applied and PR created (#107)
 - **2026-02-27**: Applied both fixes (workflow trigger + duplicate API_KEY) locally. Changes verified (YAML valid). Push rejected due to GitHub App permission restriction.
 - **2026-02-26**: Attempted to apply fixes directly but push was rejected due to GitHub App permission restrictions on workflow files
 - The exact diffs are now provided above for manual application
@@ -62,4 +63,4 @@ GitHub App tokens (like those used by CI) require explicit `workflows` permissio
 
 ## Linked PRs
 
-- PR #104: docs: update backend-engineer.md with findings
+- PR #107: fix(backend-engineer): workflow trigger branch and duplicate API_KEY
