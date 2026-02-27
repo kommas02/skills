@@ -2,6 +2,17 @@
 
 ## Session 2026-02-27
 
+### Proactive: skill.json Validation in skill-installer
+- **Problem**: skill-installer validated SKILL.md but not skill.json during installation
+- **Solution**: Added skill.json validation to `_validate_skill()` function
+- **Implementation**:
+  - Added check for skill.json existence
+  - Added validation for required fields: name, version, description, category
+  - Added JSON syntax validation with clear error messages
+- **Files Changed**: 
+  - `skills/.system/skill-installer/scripts/install-skill-from-github.py`
+- **Result**: All 33 curated skills and 2 system skills pass validation
+
 ### Issue #36 - Skill Model Compatibility - COMPLETED
 - **Problem**: Skills lacked model compatibility guidance for optimal AI model selection
 - **Solution**: Added model compatibility info to all SKILL.md files
