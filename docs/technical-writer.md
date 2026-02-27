@@ -47,7 +47,7 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - **Fix**: Added `evaluation-framework.md` to the docs/ section in AGENTS.md project structure
 - **Impact**: Documentation consistency - docs/ directory now accurately represented
 
-### Issue #52: .experimental folder referenced but doesn't exist
+### Issue #52: .experimental folder reference
 - **Status**: RESOLVED (previously by Product-Architect)
 - **Analysis**: The `skills/.experimental/` directory now exists with README.md
 - **Verification**: Directory confirmed present at `skills/.experimental/`
@@ -57,3 +57,9 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - Confirmed skill-template.md exists and is properly linked
 - Verified issue templates exist (.github/ISSUE_TEMPLATE/)
 - All internal markdown links in docs/ directory are valid
+
+### PR #128: Fix documentation inconsistencies in domain docs (2026-02-27)
+- **Issue #96**: Corrected docs/ui-ux-engineer.md which incorrectly claimed evaluation-framework.md doesn't exist
+- **Issue #52**: Fixed misleading heading in docs/technical-writer.md
+- **Action**: Closed both issues as resolved - files actually exist
+- **Impact**: Domain docs now have accurate information
