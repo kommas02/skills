@@ -57,3 +57,9 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - Confirmed skill-template.md exists and is properly linked
 - Verified issue templates exist (.github/ISSUE_TEMPLATE/)
 - All internal markdown links in docs/ directory are valid
+
+### PR #128: Fix documentation inconsistencies in domain docs (2026-02-27)
+- **Issue #96**: Corrected docs/ui-ux-engineer.md which incorrectly claimed evaluation-framework.md doesn't exist
+- **Issue #52**: Fixed misleading heading in docs/technical-writer.md
+- **Action**: Closed both issues as resolved - files actually exist
+- **Impact**: Domain docs now have accurate information
