@@ -113,3 +113,7 @@ GitHub App tokens (like those used by CI) require explicit `workflows` permissio
 ## Last Updated
 
 2026-02-27
+
+## Linked PRs
+
+- PR #163: docs(backend-engineer): document workflow fixes pending manual application
