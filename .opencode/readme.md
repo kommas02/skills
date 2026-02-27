@@ -4,7 +4,7 @@ This repository uses OpenCode for AI agent task execution and management.
 
 ## Overview
 
-This is the official OpenAI Skills repository - a collection of AI agent skills that can be discovered and used by Codex and other AI agents to perform specific tasks in a repeatable way.
+This is the official **OpenAI Skills** repository - a collection of AI agent skills that can be discovered and used by Codex and other AI agents to perform specific tasks in a repeatable way.
 
 ## Documentation
 
@@ -25,6 +25,8 @@ OpenCode Zen is a curated list of tested and verified models provided by the Ope
 | MiniMax M2.5 Free | Free | Free |
 | Big Pickle | Free | Free |
 | GPT 5 Nano | Free | Free |
+
+The free models are available for a limited time while the team collects feedback and improves them.
 
 - [OpenCode Zen Documentation](https://opencode.ai/docs/zen/)
 
@@ -62,11 +64,23 @@ Or using Yarn:
 yarn global add opencode-ai
 ```
 
+Or using Homebrew on macOS and Linux:
+
+```bash
+brew install anomalyco/tap/opencode
+```
+
 ### Verify Installation
 
 ```bash
 opencode --version
 ```
+
+### Configure Provider
+
+1. Run the `/connect` command in the TUI, select opencode, and head to [opencode.ai/auth](https://opencode.ai/auth).
+2. Sign in, add your billing details, and copy your API key.
+3. Paste your API key when prompted.
 
 ### Initialize
 
@@ -142,8 +156,8 @@ Example configuration:
 
 Custom agents can be defined in `.opencode/agents/`. Agents can be configured as:
 
-- **Primary agents**: Main assistants for development work
-- **Subagents**: Specialized assistants invoked via @mentions
+- **Primary agents**: Main assistants for development work (Build, Plan)
+- **Subagents**: Specialized assistants invoked via @mentions (General, Explore)
 
 Example agent definition (`.opencode/agents/example.md`):
 
@@ -179,10 +193,11 @@ skill-name/
 
 SKILL.md must include frontmatter with:
 
-- `name` (required): Skill identifier
-- `description` (required): What the skill does
+- `name` (required): Skill identifier (1-64 chars, lowercase alphanumeric with hyphens)
+- `description` (required): What the skill does (1-1024 chars)
 - `license` (optional): License name
 - `compatibility` (optional): Compatible platforms
+- `metadata` (optional): Additional key-value pairs
 
 ## Directory Structure
 
