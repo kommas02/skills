@@ -32,5 +32,12 @@
 
 ## Open Issues
 - Issue #17: Fix CI triggers on wrong branch - main instead of opencode
+  - **Status**: Identified fix, requires manual push or elevated permissions
+  - **Fix**: Change `.github/workflows/main.yml` line 6 from `main` to `opencode`
+  - **Blocker**: GitHub App (kommas02) lacks `workflows` permission to push workflow file changes
 - Issue #4: Standardize license file (NOTICE.txt vs LICENSE.txt)
 - Issue #3: Standardize directory naming (COMPLETED)
+
+## Known Limitations
+- GitHub App push restrictions: Cannot push workflow file changes without explicit `workflows` permission
+- Workaround: Use repository owner account or manual push for workflow modifications
