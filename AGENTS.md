@@ -39,39 +39,40 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │   ├── .system/           # System skills (auto-installed in Codex)
 │   │   ├── skill-creator/
 │   │   └── skill-installer/
-│   └── .curated/          # Curated skills
-│       ├── cloudflare-deploy/
-│       ├── develop-web-game/
-│       ├── doc/
-│       ├── doc-test/
-│       ├── figma/
-│       ├── figma-implement-design/
-│       ├── gh-address-comments/
-│       ├── gh-fix-ci/
-│       ├── growth-innovation-strategist/
-│       ├── imagegen/
-│       ├── jupyter-notebook/
-│       ├── linear/
-│       ├── netlify-deploy/
-│       ├── notion-knowledge-capture/
-│       ├── notion-meeting-intelligence/
-│       ├── notion-research-documentation/
-│       ├── notion-spec-to-implementation/
-│       ├── openai-docs/
-│       ├── pdf/
-│       ├── playwright/
-│       ├── render-deploy/
-│       ├── screenshot/
-│       ├── security-best-practices/
-│       ├── security-ownership-map/
-│       ├── security-threat-model/
-│       ├── sentry/
-│       ├── sora/
-│       ├── speech/
-│       ├── spreadsheet/
-│       ├── transcribe/
-│       ├── vercel-deploy/
-│       └── yeet/
+│   ├── .curated/          # Curated skills (published, stable)
+│   │   ├── cloudflare-deploy/
+│   │   ├── develop-web-game/
+│   │   ├── doc/
+│   │   ├── doc-test/
+│   │   ├── figma/
+│   │   ├── figma-implement-design/
+│   │   ├── gh-address-comments/
+│   │   ├── gh-fix-ci/
+│   │   ├── growth-innovation-strategist/
+│   │   ├── imagegen/
+│   │   ├── jupyter-notebook/
+│   │   ├── linear/
+│   │   ├── netlify-deploy/
+│   │   ├── notion-knowledge-capture/
+│   │   ├── notion-meeting-intelligence/
+│   │   ├── notion-research-documentation/
+│   │   ├── notion-spec-to-implementation/
+│   │   ├── openai-docs/
+│   │   ├── pdf/
+│   │   ├── playwright/
+│   │   ├── render-deploy/
+│   │   ├── screenshot/
+│   │   ├── security-best-practices/
+│   │   ├── security-ownership-map/
+│   │   ├── security-threat-model/
+│   │   ├── sentry/
+│   │   ├── sora/
+│   │   ├── speech/
+│   │   ├── spreadsheet/
+│   │   ├── transcribe/
+│   │   ├── vercel-deploy/
+│   │   └── yeet/
+│   └── .experimental/    # Experimental skills (in development)
 ├── README.md
 └── contributing.md
 ```
@@ -98,6 +99,7 @@ skill-name/
 3. **Licensing**: Each skill must have a LICENSE.txt file
 4. **System Skills**: Located in `skills/.system/` - auto-installed in Codex
 5. **Curated Skills**: Located in `skills/.curated/` - can be installed via `$skill-installer`
+6. **Experimental Skills**: Located in `skills/.experimental/` - in development, may have breaking changes
 
 ## For AI Agents
 
