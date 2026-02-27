@@ -104,24 +104,124 @@ This will analyze your project and create an `AGENTS.md` file in the project roo
 
 For enhanced AI agent capabilities with multi-provider support, consider installing [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode).
 
-### Installation
+### oh-my-opencode Installation (Recommended)
+
+For LLM agents helping users set up oh-my-opencode, follow this workflow:
+
+**Step 0: Ask user about subscriptions**
+
+Ask the user these questions to determine CLI options:
+
+1. **Do you have a Claude Pro/Max Subscription?**
+   - If **yes**: **Are you on max20 (20x mode)?**
+     - **max20** → `--claude=max20`
+     - **not max20** → `--claude=yes`
+   - If **no** → `--claude=no`
+
+2. **Do you have an OpenAI/ChatGPT Plus Subscription?**
+   - If **yes** → `--openai=yes`
+   - If **no** → `--openai=no`
+
+3. **Will you integrate Gemini models?**
+   - If **yes** → `--gemini=yes`
+   - If **no** → `--gemini=no`
+
+4. **Do you have a GitHub Copilot Subscription?**
+   - If **yes** → `--copilot=yes`
+   - If **no** → `--copilot=no`
+
+5. **Do you have access to OpenCode Zen (opencode/ models)?**
+   - If **yes** → `--opencode-zen=yes`
+   - If **no** → `--opencode-zen=no`
+
+6. **Do you have a Z.ai Coding Plan subscription?**
+   - If **yes** → `--zai-coding-plan=yes`
+   - If **no** → `--zai-coding-plan=no`
+
+**Provider Priority**: Native (anthropic/, openai/, google/) > GitHub Copilot > OpenCode Zen > Z.ai Coding Plan
+
+### Step 1: Install OpenCode (if not installed)
 
 ```bash
-bunx oh-my-opencode install
+if command -v opencode &> /dev/null; then
+    echo "OpenCode $(opencode --version) is installed"
+else
+    echo "OpenCode is not installed. Please install it first."
+    echo "Ref: https://opencode.ai/docs"
+fi
 ```
 
-This plugin provides:
-- Multi-provider support (Anthropic Claude, OpenAI, Google Gemini, GitHub Copilot)
-- Automatic provider fallback
-- Model optimization per agent type
-- Authentication management
+### Step 2: Run the installer
 
-### Provider Priority
+Based on user's answers, run the CLI installer with appropriate flags:
 
-When using oh-my-opencode, the provider priority is:
-**Native (anthropic/, openai/, google/) > GitHub Copilot > OpenCode Zen > Z.ai Coding Plan**
+```bash
+bunx oh-my-opencode install --no-tui --claude=<yes|no|max20> --gemini=<yes|no> --copilot=<yes|no> [--openai=<yes|no>] [--opencode-zen=<yes|no>] [--zai-coding-plan=<yes|no>]
+```
 
-#### Subscription Options
+**Examples:**
+- User has all native subscriptions: `bunx oh-my-opencode install --no-tui --claude=max20 --openai=yes --gemini=yes --copilot=no`
+- User has only Claude: `bunx oh-my-opencode install --no-tui --claude=yes --gemini=no --copilot=no`
+- User has Claude + OpenAI: `bunx oh-my-opencode install --no-tui --claude=yes --openai=yes --gemini=no --copilot=no`
+- User has only GitHub Copilot: `bunx oh-my-opencode install --no-tui --claude=no --gemini=no --copilot=yes`
+- User has only OpenCode Zen: `bunx oh-my-opencode install --no-tui --claude=no --gemini=no --copilot=no --opencode-zen=yes`
+
+### Step 3: Verify Setup
+
+```bash
+opencode --version  # Should be 1.0.150 or higher
+cat ~/.config/opencode/opencode.json  # Should contain "oh-my-opencode" in plugin array
+```
+
+### Step 4: Configure Authentication
+
+#### Anthropic (Claude)
+
+```bash
+opencode auth login
+# Provider: Select Anthropic
+# Login method: Select Claude Pro/Max
+# Complete OAuth flow in browser
+```
+
+#### Google Gemini (Antigravity OAuth)
+
+First, add the opencode-antigravity-auth plugin in opencode.json:
+
+```json
+{
+  "plugin": [
+    "oh-my-opencode",
+    "opencode-antigravity-auth@latest"
+  ]
+}
+```
+
+#### GitHub Copilot (Fallback Provider)
+
+GitHub Copilot is supported as a **fallback provider** when native providers are unavailable.
+
+**Model Mappings when using GitHub Copilot:**
+
+| Agent         | Model                            |
+| ------------- | -------------------------------- |
+| **Sisyphus**  | `github-copilot/claude-opus-4.5` |
+| **Oracle**    | `github-copilot/gpt-5.2`         |
+| **Explore**   | `opencode/gpt-5-nano`            |
+| **Librarian** | `zai-coding-plan/glm-4.7` (if Z.ai available) |
+
+#### OpenCode Zen
+
+OpenCode Zen provides access to `opencode/` prefixed models:
+
+| Agent         | Model                            |
+| ------------- | -------------------------------- |
+| **Sisyphus**  | `opencode/claude-opus-4-5`       |
+| **Oracle**    | `opencode/gpt-5.2`               |
+| **Explore**   | `opencode/gpt-5-nano`            |
+| **Librarian** | `opencode/big-pickle`            |
+
+### Model Availability by Provider
 
 | Provider | Models Available |
 |----------|-----------------|
@@ -130,6 +230,14 @@ When using oh-my-opencode, the provider priority is:
 | Google Gemini | gemini-2.5-pro, gemini-2.5-flash, gemini-3-flash-preview |
 | GitHub Copilot | claude-opus-4.5 (via Copilot), gpt-5.2 (via Copilot) |
 | OpenCode Zen | claude-opus-4-5, gpt-5.2, gpt-5-nano, big-pickle |
+
+### Usage Tips
+
+1. **Sisyphus agent strongly recommends Opus 4.5 model** - Using other models may result in significantly degraded experience.
+
+2. **Feeling lazy?** Just include `ultrawork` (or `ulw`) in your prompt. The agent figures out the rest.
+
+3. **Need precision?** Press **Tab** to enter Prometheus (Planner) mode, create a work plan through an interview process, then run `/start-work` to execute it with full orchestration.
 
 See the [oh-my-opencode installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for detailed setup instructions.
 
