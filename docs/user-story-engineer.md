@@ -113,3 +113,13 @@ Use this format when creating issues:
   - Added Good vs Bad Acceptance Criteria examples table
   - This helps contributors create better issues with measurable criteria
 
+### 2026-02-27 (Proactive Improvement - System Skills)
+- **Documentation Gap**: Found system skills (skill-creator, skill-installer) lacked Troubleshooting sections
+  - Proactive scan showed: 16 curated skills have Prerequisites, 21 have Troubleshooting
+  - System skills had neither despite being most-used by Codex users
+- **Improvement**: Added Troubleshooting sections to both system skills
+  - skill-creator: Added troubleshooting for init script errors, YAML format, validation, triggers
+  - skill-installer: Added troubleshooting for already installed, network, auth, stale list
+  - Aligns with best practice from docs/skill-template.md
+- PR #149: https://github.com/kommas02/skills/pull/149
+
