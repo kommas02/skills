@@ -33,10 +33,12 @@ Community-curated skills available for installation via `$skill-installer`.
 | cloudflare-deploy | Deploy applications to Cloudflare |
 | develop-web-game | Build web-based games |
 | doc | Work with .docx documents |
+| doc-test | Test skill for dependency verification |
 | figma | Figma design integration |
 | figma-implement-design | Implement Figma designs |
 | gh-address-comments | Address GitHub comments |
 | gh-fix-ci | Fix CI/CD issues |
+| growth-innovation-strategist | Growth strategy and innovation analysis |
 | imagegen | Image generation |
 | jupyter-notebook | Jupyter notebook tasks |
 | linear | Linear project management |
