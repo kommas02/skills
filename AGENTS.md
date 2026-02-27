@@ -31,7 +31,6 @@ This is the official **OpenAI Skills** repository - a collection of AI agent cap
 │   ├── technical-writer.md       # Technical writer notes
 │   ├── user-story-engineer.md    # User story engineer notes
 │   ├── Product-Architect.md      # Product architect notes
-│   ├── Product-Architect-notes.md # Product architect detailed notes
 │   ├── Growth-Innovation-Strategist.md # Growth strategy notes
 │   └── RnD.md                    # Research & Development notes
 ├── scripts/               # Utility scripts
