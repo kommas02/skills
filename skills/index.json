@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-02-26T20:31:41.539602Z",
-  "total_skills": 33,
+  "generated_at": "2026-02-27T08:36:32.488032Z",
+  "total_skills": 34,
   "skills": [
     {
       "name": "cloudflare-deploy",
@@ -31,12 +31,23 @@
       "license": "Apache-2.0"
     },
     {
+      "name": "doc-test",
+      "description": "Test skill with dependency on doc skill for verifying dependency resolution system",
+      "version": "1.0.0",
+      "category": "curated",
+      "path": "skills/.curated/doc-test",
+      "metadata": {},
+      "license": "MIT"
+    },
+    {
       "name": "figma",
       "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
       "version": "1.0.0",
       "category": "curated",
       "path": "skills/.curated/figma",
-      "metadata": {},
+      "metadata": {
+        "short-description": "Fetch design context and assets from Figma via MCP"
+      },
       "license": "Apache-2.0"
     },
     {
@@ -174,7 +185,9 @@
       "version": "1.0.0",
       "category": "curated",
       "path": "skills/.curated/pdf",
-      "metadata": {},
+      "metadata": {
+        "short-description": "Read, create, and review PDF files with visual checks"
+      },
       "license": "Apache-2.0"
     },
     {
@@ -183,7 +196,9 @@
       "version": "1.0.0",
       "category": "curated",
       "path": "skills/.curated/playwright",
-      "metadata": {},
+      "metadata": {
+        "short-description": "Automate real browsers for testing and scraping"
+      },
       "license": "Apache-2.0"
     },
     {
@@ -201,7 +216,9 @@
       "version": "1.0.0",
       "category": "curated",
       "path": "skills/.curated/screenshot",
-      "metadata": {},
+      "metadata": {
+        "short-description": "Capture desktop screenshots (full screen, window, or region)"
+      },
       "license": "Apache-2.0"
     },
     {
@@ -304,7 +321,9 @@
       "version": "1.0.0",
       "category": "curated",
       "path": "skills/.curated/vercel-deploy",
-      "metadata": {},
+      "metadata": {
+        "short-description": "Deploy web apps to Vercel with preview URLs"
+      },
       "license": "MIT"
     },
     {
