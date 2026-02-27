@@ -132,6 +132,9 @@ This documentation was created as part of Issue #6: "Add .opencode configuration
 
 ## Improvements Log
 
+### 2026-02-27
+- Documented Issue #17: CI workflow triggers on wrong branch (`main` instead of `opencode`)
+
 ### 2026-02-26
 - Synced root `opencode.json` with `.opencode/opencode.json` to include permission section (PR #90)
 - Fixed typos in `.github/workflows/main.yml`: "compleks" → "complex", "maks" → "max", "concolidate" → "consolidate", "conteks" → "context" (FIXED)
