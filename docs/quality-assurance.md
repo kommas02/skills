@@ -17,10 +17,13 @@ Automated validation workflow for all skills in the repository.
 2. Required fields in openai.yaml (`interface`, `display_name`, `short_description`, `default_prompt`)
 3. Python syntax for all `.py` files
 4. SKILL.md frontmatter (required `name` and `description` fields)
+5. Markdown link validity
 
 **Scripts:**
 - `.github/scripts/validate_openai.py` - Validates openai.yaml structure
 - `.github/scripts/validate_skill.py` - Validates SKILL.md frontmatter
+- `.github/scripts/validate_python.py` - Validates Python syntax
+- `.github/scripts/validate_links.py` - Validates markdown links
 
 **Triggers:**
 - On pull requests modifying `skills/**`
@@ -30,6 +33,5 @@ Automated validation workflow for all skills in the repository.
 - `skills/.system/skill-installer/agents/openai.yaml` missing `default_prompt` field
 
 ## Future Improvements
-- Add link validation for markdown files
 - Add more comprehensive schema validation
 - Consider adding integration tests for skill scripts
