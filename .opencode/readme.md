@@ -121,7 +121,17 @@ This plugin provides:
 When using oh-my-opencode, the provider priority is:
 **Native (anthropic/, openai/, google/) > GitHub Copilot > OpenCode Zen > Z.ai Coding Plan**
 
-See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for details.
+#### Subscription Options
+
+| Provider | Models Available |
+|----------|-----------------|
+| Anthropic Claude | claude-opus-4.5, claude-sonnet-4.5, claude-sonnet-4 |
+| OpenAI | gpt-5.2, gpt-5.1, gpt-5-nano |
+| Google Gemini | gemini-2.5-pro, gemini-2.5-flash, gemini-3-flash-preview |
+| GitHub Copilot | claude-opus-4.5 (via Copilot), gpt-5.2 (via Copilot) |
+| OpenCode Zen | claude-opus-4-5, gpt-5.2, gpt-5-nano, big-pickle |
+
+See the [installation guide](https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md) for detailed setup instructions.
 
 ## Configuration
 
