@@ -69,7 +69,7 @@ INIT → PLAN → IMPLEMENT → VERIFY → SELF-REFLECTION → DELIVER (PR)
 ### opencode.json (project root)
 Main configuration file located in project root:
 - Model configuration (`opencode/minimax-m2.5-free`)
-- Agent definitions (13 custom agents)
+- Agent definitions (14 custom agents)
 - Tool permissions
 
 Note: `.opencode/opencode.json` should be kept in sync with root `opencode.json`.
@@ -96,6 +96,7 @@ Markdown-based agent definitions:
 | technical-writer | Documentation |
 | user-story-engineer | Requirements |
 | growth-innovation-strategist | Growth/Innovation |
+| skill-qa | Skill Quality Assurance |
 
 ## Skills
 
@@ -135,6 +136,7 @@ This documentation was created as part of Issue #6: "Add .opencode configuration
 ### 2026-02-27
 - Documented Issue #17: CI workflow triggers on wrong branch (`main` instead of `opencode`)
 - Created PR #150: Added `skill-qa` agent to root `opencode.json` to match `.opencode/opencode.json` (Issue #147)
+- Updated docs/ai-agent-engineer.md: Fixed agent count (13→14) and added skill-qa to agents table
 
 ### 2026-02-26
 - Synced root `opencode.json` with `.opencode/opencode.json` to include permission section (PR #90)
