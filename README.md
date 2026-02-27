@@ -9,19 +9,52 @@ Learn more:
 - [Create custom skills in Codex](https://developers.openai.com/codex/skills/create-skill)
 - [Agent Skills open standard](https://agentskills.io)
 
+## Directory Structure
+
+```
+skills/
+├── .system/        # System skills (auto-installed in Codex)
+├── .curated/       # Production-ready skills (installable via $skill-installer)
+└── .experimental/  # Skills in development or testing
+```
+
+## Skill Categories
+
+### System Skills (`.system/`)
+Automatically available in the latest version of Codex. Includes:
+- `skill-creator` - Interactive guide for creating new skills
+- `skill-installer` - Handles skill installation and discovery
+
+### Curated Skills (`.curated/`)
+Production-ready skills that can be installed on-demand:
+- Deployment skills (cloudflare-deploy, netlify-deploy, render-deploy, vercel-deploy)
+- Development skills (develop-web-game, figma, figma-implement-design, playwright)
+- Productivity skills (linear, notion-*, gh-address-comments, gh-fix-ci)
+- And more...
+
+### Experimental Skills (`.experimental/`)
+Skills in development or testing. May have breaking changes.
+
 ## Installing a skill
 
-Skills in [`.system`](skills/.system/) are automatically installed in the latest version of Codex.
+### System Skills
+Already installed in Codex. Run `/skill-creator` or `/skill-installer` to use.
 
-To install [curated](skills/.curated/) skills, you can use the `$skill-installer` inside Codex.
-
-Curated skills can be installed by name:
+### Curated Skills
+Use `$skill-installer` inside Codex:
 
 ```
 $skill-installer gh-address-comments
 ```
 
 After installing a skill, restart Codex to pick up new skills.
+
+### Experimental Skills
+Use the skill-installer with the path flag:
+
+```
+$skill-installer --path skills/.experimental/<skill-name>
+```
 
 ## License
 
