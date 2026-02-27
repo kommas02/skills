@@ -2,8 +2,33 @@
 
 ## Completed Work
 
+### 2026-02-27
+**Issue**: `skills/.experimental/` directory exists with README but not documented in AGENTS.md
+
+**Solution**: Updated AGENTS.md to:
+1. Add `.experimental/` directory to project structure diagram
+2. Add "(published, stable)" descriptor to .curated section
+3. Add Experimental Skills convention (item 6) to Key Conventions section
+
+**Impact**: Documentation now accurately reflects repository structure, improving navigation clarity for users
+
+---
+
 ### 2026-02-27 (Proactive Scan)
 **Action**: Comprehensive UI/UX scan of repository
+
+**Findings**:
+- All 32 curated skills have required LICENSE.txt files
+- All 32 curated skills have SKILL.md with proper frontmatter (name, description)
+- All 2 system skills have required files
+- All 34 skill.json files pass JSON validation
+- Directory naming consistent (references/ plural, no singular "reference")
+- AGENTS.md accurately reflects 19 docs/ files (18 md + 1 json)
+- AGENTS.md accurately reflects 32 curated skills in project structure
+- README.md and contributing.md are consistent with actual structure
+- Found missing `.experimental/` directory in AGENTS.md (now fixed)
+
+**Status**: Repository in good health - no UI/UX issues found
 
 **Findings**:
 - All 32 curated skills have required LICENSE.txt files
