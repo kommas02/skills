@@ -81,3 +81,10 @@ Documentation improvements, consistency fixes, naming standardization for skill 
 - Verified all skill.json files pass JSON validation
 - Verified all docs/*.md files listed in AGENTS.md exist
 - Verified .experimental/ directory exists with README.md
+- Verified relative link in blueprint.md (to issue template) is valid
+
+## Scan Results (2026-02-27 later)
+- All 34 skills have skill.json ✓
+- All skill.json files are valid JSON ✓
+- All docs/*.md files match AGENTS.md listing ✓
+- Issue #153 (skill.json in docs) - FIXED and closed
