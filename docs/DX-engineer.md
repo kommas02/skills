@@ -32,7 +32,12 @@ INIT → PLAN → IMPLEMENT → VERIFY → SELF-REFLECTION → DELIVER (PR)
 ## Known Issues & Fixes Log
 | Date | Issue | Solution | Status |
 |------|-------|----------|--------|
-| 2026-02-25 | Workflow triggered on wrong branch (main instead of opencode) | Changed `.github/workflows/main.yml` branch from `main` to `opencode` | Ready (push blocked by GitHub App permissions) |
+| 2026-02-27 | Workflow triggered on wrong branch (main instead of opencode) in issue #17 | Changed `.github/workflows/main.yml` line 6: `main` → `opencode` | Fix committed locally on `dx/fix-workflow-branch-opencode` (push blocked by GitHub App permissions - see note below) |
+
+## Known Limitations
+- **GitHub App Workflow Permission**: The github-actions[bot] lacks permission to push workflow file changes (`.github/workflows/*`). This is a GitHub security restriction.
+- **Workaround**: Either use a PAT with workflow permissions, or have a human user push the changes.
+- **Issue Comment**: https://github.com/kommas02/skills/issues/17#issuecomment-3971566031
 
 ## Best Practices
 - Never refactor unrelated modules
