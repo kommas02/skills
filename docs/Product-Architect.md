@@ -68,6 +68,10 @@ The Product-Architect domain focuses on:
 2. **Dependency Resolution** - Implement skill dependency resolution system
 3. **Version Migration** - Add version upgrade scripts for skill.json schema changes
 
+### Proactive Scan (2026-02-27)
+- **Issue #95 verification**: growth-innovation-strategist already has agents/ directory - appears resolved
+- **doc-test skill**: Found missing agents/ directory - added openai.yaml for consistency
+
 ### Related Issues
 - #20: Create skill metadata schema (COMPLETED)
 - #21: Add skill evaluation framework (QA domain)

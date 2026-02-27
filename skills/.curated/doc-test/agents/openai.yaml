@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doc Test"
+  short_description: "Test skill for verifying dependency resolution system. Depends on doc skill."
+  default_prompt: "Test the dependency resolution between doc-test and doc skills."
